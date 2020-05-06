@@ -1,0 +1,38 @@
+{
+  "name": "site",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "siteAddress": {
+      "type": "string",
+      "required": true
+    },
+    "siteCity": {
+      "type": "string",
+      "required": true
+    },
+    "siteName": {
+      "type": "string",
+      "required": true
+    },
+    "sitePhone": {
+      "type": "string",
+      "required": true
+    },
+    "siteState": {
+      "type": "string",
+      "required": true
+    },
+    "siteZip": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

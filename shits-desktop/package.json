@@ -1,0 +1,28 @@
+{
+  "name": "SHITS",
+  "version": "0.0.1",
+  "description": "Safety and Health Information Tracking System",
+  "main": "main.js",
+  "namespace": "lril",
+  "readme": "README.md",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanrobertwright/js_projects"
+  },
+  "keywords": [],
+  "author": "Sean Wright",
+  "email": "seanrobertwright@gmail.com",
+  "license": "Apache-2.0",
+  "production": false,
+  "dependencies": {
+    "electron": "^8.2.4",
+    "fullname": "^4.0.1",
+    "username": "^5.1.0"
+  },
+  "devDependencies": {
+    "replace-in-file": "^2.5.3"
+  }
+}

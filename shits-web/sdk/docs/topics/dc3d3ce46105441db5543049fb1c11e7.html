@@ -1,0 +1,327 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>What&apos;s New in OpenUI5 1.75</title><link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="themes/sap-default/img/favicon.ico"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="abstract" content="With this release OpenUI5 is upgraded from version 1.74 to 1.75."><meta name="description" content="With this release OpenUI5 is upgraded from version 1.74 to 1.75."><meta name="content category" content="development"><script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"6660a59a8a22460a91fe65a0d96a567e.html","previousTopicHref":"b9b0a3f223c14b9d99e0d86e649cafec.html"}</script><link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css"><script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script><script type="text/javascript" src="toc-info.js"></script><script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script>
+			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+			    "progress,section,time,video").split(',');
+			  for (var i = 0; i < e.length; i++) {
+			    document.createElement(e[i]);
+			  }
+			</script>
+		<![endif]-->
+        
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+        }
+        func();
+       }
+     }
+     }
+      
+    addLoadEvent(function() { prettyPrint();
+if ($('#local-navigation').length) {
+        $('#local-navigation').navigation();
+    }
+$('.collapsible').collapsify({"expandText":"Display Content","collapseText":"Hide Content","codeblockText":"Code Sample","codeblockCopyText":"Copy code to clipboard","codeblockSelectText":"Select code for copying to clipboard"});
+
+
+});
+      
+    </script>
+     <script type="text/javascript" src="js/prettify.js"> </script><script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script><script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head><body class="en-us sap-default centered navigation-default toc-injection enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;"><div id="d4h5-main-container" class="container_12" role="application"><ul id="page-links" class="hidden"><li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li><li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li><li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li></ul><div id="d4h5-section-container" class="grid_12" style="padding-top: 0;"><div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;"><section><div id="content-toolbar" class="toolbar hide-for-small"></div><div class="page concept  - topic-topic concept-concept " id="loiodc3d3ce46105441db5543049fb1c11e7"><h1 class="title topictitle1" hidden>What&apos;s New in <span class="ph"><span class="ph pname">OpenUI5</span></span>
+1.75</h1><div class="body conbody" id="loiodc3d3ce46105441db5543049fb1c11e7__Conbody_WN_SAPUI5_175"><p class="shortdesc" hidden>With
+this release <span class="ph"><span class="ph pname">OpenUI5</span></span> is upgraded
+from version 1.74 to 1.75.</p>
+<div class="section collapsible expanded" id="loiodc3d3ce46105441db5543049fb1c11e7__section_yxw_pxt_zcb"><section class="section collapsible expanded" type="New Features"><h2 class="section_title" style="font-size: 1.15em;">New Features</h2>
+
+<div class="table-wrapper tablenoborder"><table summary id="loiodc3d3ce46105441db5543049fb1c11e7__table_krd_ltq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis">Browser and Platform Support</span><p class="p"><span class="ph"><span class="ph pname">OpenUI5</span></span> now supports the latest Chromium-based version of Microsoft
+Edge. The next long-term maintenance&#xA0;<span class="ph"><span class="ph pname">OpenUI5</span></span>&#xA0;release that comes after&#xA0;1.71 will be the last&#xA0;release to
+support the legacy EdgeHTML-based version of Microsoft Edge. For
+more information, see <a class="xref" href="../../#/topic/74b59efa0eef48988d3b716bd0ecc933.html" title="Browser and platform support for the OpenUI5 libraries on iOS, Android, macOS, and Windows platforms." target="_top">Browser and Platform Support</a>.</p></td>
+</tr>
+</tbody></table></div>
+</section></div>
+<div class="section collapsible expanded" id="loiodc3d3ce46105441db5543049fb1c11e7__section_qwl_pb5_zcb"><section class="section collapsible expanded" type="Improved Features"><h2 class="section_title" style="font-size: 1.15em;">Improved Features</h2><div class="table-wrapper tablenoborder"><table summary id="loiodc3d3ce46105441db5543049fb1c11e7__table_tpj_dvq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis">Card Explorer</span></p>
+<p class="p">We have introduced a schema validation feature in our samples in
+the Card Explorer. With this option, developers can see a more
+detailed report for mistakes inside the card manifest. Things
+like wrong names of properties, bad property types or bad
+structures are easily spotted.<span class="ph"> For more information, explore the samples in <a class="xref" href="../../test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/exploreOverview/types" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/exploreOverview/types" title="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/exploreOverview/types">https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/exploreOverview/types</a>.</span></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis">Currency Codes</span></p>
+<p class="p">When displaying ISO currency codes using
+<samp class="ph codeph">sap.ui.core.format.NumberFormat</samp>,
+<samp class="ph codeph">sap.ui.model.type.Currency</samp> or
+<samp class="ph codeph">sap.ui.model.odata.type.Currency</samp>, the
+currency code is now displayed by default after the amount,
+ignoring locale, in order to be consistent with SAP design
+guidelines. The core configuration parameter
+<samp class="ph codeph">trailingCurrencyCode</samp> can be used to switch
+the behavior globally.</p>
+<p class="p">If currency symbols are enabled (formatting option
+<samp class="ph codeph">currencyCode: false</samp>), they continue to
+follow locale-specific placement.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><span class="ph"><span class="ph pname">OpenUI5</span></span> OData V2 Messages</span></p>
+<p class="p">With the new version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V2 model, the target of server messages is shortened by
+removing associated pairs of navigation properties. For example,
+a
+<samp class="ph codeph">/SalesOrderSet(&apos;1&apos;)/ToLineItems(SalesOrderID=&apos;1&apos;,ItemPosition=&apos;10&apos;)/ToHeader/GrossAmount</samp>
+message target gets reduced to
+<samp class="ph codeph">/SalesOrderSet(&apos;1&apos;)/GrossAmount</samp> if the
+<samp class="ph codeph">ToLineItems</samp> and <samp class="ph codeph">ToHeader</samp>
+navigation properties have the same relationship in the service
+metadata. If the second navigation property references a
+collection, the message target path is reduced only if the
+referenced entity is the same as without the navigation.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 Model</span></p>
+<p class="p">The new version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 model introduces the following features:</p>
+<ul class="ul" id="loiodc3d3ce46105441db5543049fb1c11e7__ul_mfh_zdl_rhb">
+<li class="li">When displaying aggregated data with a list binding using
+either the <samp class="ph codeph">$$aggregation</samp> binding parameter
+or
+<samp class="ph codeph">sap.ui.model.odata.v4.ODataListBinding#setAggregation</samp>,
+you can filter by properties that are part of the original
+entity set but not of the result set. Note that these
+filters need to be provided as
+<samp class="ph codeph">sap.ui.model.Filter</samp> objects.</li>
+<li class="li"><samp class="ph codeph">sap.ui.model.odata.v4.Context#requestSideEffects</samp>
+now supports updating in parent bindings by specifying
+navigation properties to the parent entities in the path
+expressions. The respective navigation properties from the
+parent binding to the binding of the context and back to the
+parent need to be marked as partners in the metadata.</li>
+<li class="li">When using <samp class="ph codeph">autoExpandSelect</samp>, paths with
+navigation properties can now be added to
+<samp class="ph codeph">$select</samp>. The binding will evaluate this
+and automatically derive <samp class="ph codeph">$select</samp> and
+<samp class="ph codeph">$expand</samp>.</li>
+<li class="li">For
+<samp class="ph codeph">sap.ui.model.odata.v4.ODataPropertyBinding</samp>,
+a <samp class="ph codeph">$$noPatch</samp> binding parameter is provided,
+so that values can be changed in the model without updating
+them in the back end.</li>
+<li class="li">The <samp class="ph codeph">resume</samp> method of the
+<samp class="ph codeph">v4.ODataContextBinding</samp> and
+<samp class="ph codeph">v4.ODataListBinding</samp> classes now works
+synchronously.</li>
+</ul>
+<aside class="note restriction" aria-labelledby="note_0_title"><div class="title" id="note_0_title"><strong>Restriction</strong></div>
+<p>Due to the limited feature scope of this
+version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 model, check that all required features are in place
+before developing applications. Double-check the detailed
+documentation of the features, as certain parts of a feature may
+be missing. While we aim to be compatible with existing
+controls, some controls might not work due to small
+incompatibilities compared to
+<samp class="ph codeph">sap.ui.model.odata.(v2.)ODataModel</samp>, or due
+to missing features in the model (such as tree binding). This
+also applies to controls such as
+<samp class="ph codeph">TreeTable</samp> and
+<samp class="ph codeph">AnalyticalTable</samp>, which are not supported in
+combination with the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 model. The interface for applications has been
+changed for easier and more efficient use of the model. For a
+summary of these changes, see <a class="xref" href="../../#/topic/abd4d7c7548d4c29ab8364d3904a6d74.html" title="This section outlines the main differences between the OData V2 and OData V4 models." target="_top">Changes Compared to OData V2 Model</a>.</p></aside>
+<p class="p">For more information, see <a class="xref" href="../../#/topic/5de13cf4dd1f4a3480f7e2eaaee3f5b8.html" title="The sap.ui.model.odata.v4.ODataModel is the model implementation for consuming an OData V4 service." target="_top">OData V4 Model</a>, the <a class="xref" href="../../#/api/sap.ui.model.odata.v4" target="_top" alt="#/api/sap.ui.model.odata.v4" title="#/api/sap.ui.model.odata.v4">API Reference</a>, and
+the <a class="xref" href="../../#/entity/sap.ui.model.odata.v4.ODataModel" target="_top" alt="#/entity/sap.ui.model.odata.v4.ODataModel" title="#/entity/sap.ui.model.odata.v4.ODataModel">Samples</a> in the Demo
+Kit.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis">Title Support in Nested Components</span></p>
+<p class="p">The <samp class="ph codeph">title</samp> property can now also be defined on
+routing targets of type <samp class="ph codeph">Component</samp>. When set
+with a binding syntax, it is resolved in the context of the root
+view of the component loaded by this target.</p>
+<p class="p">The router of a nested component may also have a
+<samp class="ph codeph">title</samp> property defined on its own target(s)
+and eventually fire its own <samp class="ph codeph">titleChanged</samp> event
+once such a target is displayed. A new configuration
+<samp class="ph codeph">propagateTitle</samp> allows the
+<samp class="ph codeph">titleChanged</samp> event to propagate from an
+individual <samp class="ph codeph">Component</samp> target to the router of
+its parent component. In the routing configuration, this can
+also be enabled for all <samp class="ph codeph">Component</samp> targets, so
+that it is not necessary to define the
+<samp class="ph codeph">propagateTitle</samp> property on each
+<samp class="ph codeph">Component</samp> target.</p>
+<p class="p">For more information, see <a class="xref" href="../../#/topic/1238d706b130433c9bd6b85cfb77cece.html" title="Routing in OpenUI5 allows you to define titles declaratively in the configuration. The title can be set with valid binding syntax which is then resolved under the scope of the target to which it belongs. This means that the title can be translated when it&#x2019;s bound to the i18n model or resolved dynamically under the current binding context." target="_top">Using the title Property in Targets</a> and <a class="xref" href="../../#/topic/fb19f501b16e4e4991eb6a017770945b.html" title="Every OpenUI5 component can define routing configuration in its manifest and a UI5 router instance will be created automatically after the component is instantiated." target="_top">Enabling Routing in Nested Components</a>. <span class="ph">In addition, the <a class="xref" href="../../#/entity/sap.ui.core.routing.Router/sample/sap.ui.core.sample.RoutingNestedComponent" target="_top" alt="#/entity/sap.ui.core.routing.Router/sample/sap.ui.core.sample.RoutingNestedComponent" title="#/entity/sap.ui.core.routing.Router/sample/sap.ui.core.sample.RoutingNestedComponent">Sample</a>
+application introduced in the previous release to feature
+routing of nested components has been enhanced. It now shows
+how the new title definition and title propagation could be
+used in an application built with nested (or reuse)
+components.</span>
+</p>
+</td>
+</tr>
+</tbody></table></div></section></div>
+<div class="section collapsible expanded" id="loiodc3d3ce46105441db5543049fb1c11e7__section_rqn_wd5_zcb"><section class="section collapsible expanded" type="Improved Controls"><h2 class="section_title" style="font-size: 1.15em;">Improved Controls</h2><div class="table-wrapper tablenoborder"><table summary id="loiodc3d3ce46105441db5543049fb1c11e7__table_qcq_dvq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.InitialPagePattern</samp></span></p>
+<p class="p">We have introduced the initial page floorplan as a Demo Kit
+sample. The floorplan allows users to navigate to a single
+object to view or edit it. The interaction point on the screen
+is a single input field and it relies on assisted input to
+direct the user to the object in as few steps as possible (using
+features such as value help and live search). For more
+information, see the <a class="xref" href="https://experience.sap.com/fiori-design-web/initial-page-floorplan/" target="_blank" alt="https://experience.sap.com/fiori-design-web/initial-page-floorplan/" title="https://experience.sap.com/fiori-design-web/initial-page-floorplan/">CardSAP Fiori Design
+Guidelines</a><span class="ph"> and the <a class="xref" href="../../#/entity/sap.m.InitialPagePattern/sample/sap.m.sample.InitialPagePattern" target="_top" alt="#/entity/sap.m.InitialPagePattern/sample/sap.m.sample.InitialPagePattern" title="#/entity/sap.m.InitialPagePattern/sample/sap.m.sample.InitialPagePattern">Sample</a>.</span></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.Link</samp></span><p class="p">The
+<samp class="ph codeph">text</samp> property can now be changed using UI
+adaptation at runtime. This enables key users to provide
+meaningful link text according to the application
+context.</p><span class="ph">For more information, see the <a class="xref" href="../../#/entity/sap.m.Link" target="_top" alt="#/entity/sap.m.Link" title="#/entity/sap.m.Link">Samples</a>.</span></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.MessageBox</samp></span><p class="p">We have
+introduced a new <samp class="ph codeph">emphasizedAction</samp> property.
+This allows developers to specify which button in the dialog
+will receive the type <samp class="ph codeph">Emphasized</samp>. If
+<samp class="ph codeph">emphasizedAction</samp> is empty with no actions
+provided, the default value applies. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.m.MessageBox" target="_top" alt="#/api/sap.m.MessageBox" title="#/api/sap.m.MessageBox">API Reference</a> and
+the <a class="xref" href="../../#/entity/sap.m.MessageBox" target="_top" alt="#/entity/sap.m.MessageBox" title="#/entity/sap.m.MessageBox">Samples</a>.</span></p></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.ObjectStatus</samp></span><p class="p">We
+have enhanced the <samp class="ph codeph">sap.ui.core.IndicationColor</samp>
+palette. Three new colors were added to the palette as numbers
+6, 7, and 8. These colors enable developers to represent
+statuses that don&apos;t require a meaning in the sense of good-bad,
+but should be visually distinguishable. For example, statuses
+such as Updated, New, or Active. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.m.ObjectStatus" target="_top" alt="#/api/sap.m.ObjectStatus" title="#/api/sap.m.ObjectStatus">API Reference</a> and
+the <a class="xref" href="../../#/entity/sap.m.ObjectStatus/sample/sap.m.sample.ObjectStatus" target="_top" alt="#/entity/sap.m.ObjectStatus/sample/sap.m.sample.ObjectStatus" title="#/entity/sap.m.ObjectStatus/sample/sap.m.sample.ObjectStatus">Sample</a>.</span></p></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.integration.widgets.Card</samp></span></p>
+<div class="p">We have enhanced the capabilities of the Adaptive Card
+(Experimental). <ul class="ul" id="loiodc3d3ce46105441db5543049fb1c11e7__ul_t15_dfy_rkb">
+<li class="li">
+<p class="p">You can now load the Adaptive Card
+manifest/descriptor from &#x430; URL.</p>
+</li>
+<li class="li">
+<p class="p">The Adaptive Card supports templating, which enables
+the separation of data from the layout.</p>
+</li>
+</ul>
+</div>
+<p class="p">For more information, see the <a class="xref" href="../../test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/adaptive" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/adaptive" title="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/adaptive">Adaptive Card</a> in the
+Card Explorer.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.table.AnalyticalTable,
+sap.ui.table.Table,
+sap.ui.table.TreeTable</samp></span></p>
+<p class="p">A more comprehensive message text is now shown if no data is
+available because all table columns are hidden. </p>
+</td>
+</tr>
+</tbody></table></div></section></div>
+<div class="section collapsible expanded" id="loiodc3d3ce46105441db5543049fb1c11e7__section_r5v_3h5_zcb"><section class="section collapsible expanded" type="Demo Kit Improvements"><h2 class="section_title" style="font-size: 1.15em;">Demo Kit Improvements</h2><div class="table-wrapper tablenoborder"><table summary id="loiodc3d3ce46105441db5543049fb1c11e7__table_e2h_2vq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><p class="p"><span class="ph emphasis emphasis"><span class="ph uicontrol">Edit on GitHub</span> link from each
+<span class="ph pname">OpenUI5</span>
+<span class="ph uicontrol">Documentation</span>
+page</span></p><p class="p">We have added a direct link from each
+<span class="ph pname">OpenUI5</span> documentation page to
+its markdown version in the <span class="ph uicontrol">openui5-docs</span>
+GitHub repo. Now, when you want to send us feedback on a
+specific topic or even suggest a change with a pull request, we
+hope to save you time and efforts in finding the respective
+file.</p><img class="inline" id="loiodc3d3ce46105441db5543049fb1c11e7__image_ptx_nf2_tkb" src="loio8a5845e5be56483da308611359ba45ea_HiRes.gif"></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis">Search Highlighting in the
+<span class="ph uicontrol">Documentation</span> and
+<span class="ph uicontrol">Samples</span> sections</span></p>
+<p class="p">The search highlighting functionality is now also available in
+the <span class="ph uicontrol">Documentation</span> tree filter and the
+<span class="ph uicontrol">Samples</span> list.</p>
+<div class="fig fignone" id="loiodc3d3ce46105441db5543049fb1c11e7__fig_dhl_v3j_tkb"><div class="figbody">
+<img class="inline" id="loiodc3d3ce46105441db5543049fb1c11e7__image_kj4_3gj_tkb" src="loioe79499d4357e4a7eb7de9c5e1a835d55_HiRes.png">
+</div></div>
+<p class="p"></p>
+<div class="fig fignone" id="loiodc3d3ce46105441db5543049fb1c11e7__fig_hwj_w3j_tkb"><div class="figbody">
+<img class="inline" id="loiodc3d3ce46105441db5543049fb1c11e7__image_gpq_53j_tkb" src="loio308ff81070684b318c4da4d1290a7e95_HiRes.png">
+</div></div>
+</td>
+</tr>
+</tbody></table></div></section></div>
+</div></div></section><div class="clear"></div>
+</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="footer-container" class="grid_12"><footer>
+	<div id="custom-footerSpacer"></div>
+	
+</footer>
+</div></body></html>

@@ -1,0 +1,22 @@
+{
+  "name": "costcenter",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "costCenterDescription": {
+      "type": "string",
+      "required": true
+    },
+    "costCenterNumber": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

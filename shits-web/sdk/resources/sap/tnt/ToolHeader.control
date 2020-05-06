@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ToolHeader</name>
+    <derived/>
+    <author>SAP SE</author>
+    <documentation>The ToolHeader control is a horizontal container that is most
+commonly used to display buttons, labels, and other various input controls.
+&lt;h3&gt;Overview&lt;/h3&gt;
+The ToolHeader control is based on {@link sap.m.OverflowToolbar}. It contains clearly structured menus of commands that are available across the various apps within the same tool layout.
+&lt;h3&gt;Usage&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;If an app implements side navigation in addition to the tool header menu, the menu icon must be the first item on the left-hand side of the tool header.&lt;/li&gt;
+&lt;li&gt;The app menu and the side navigation must not have any dependencies and must work independently.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Fiori 3 theme specifics&lt;/h4&gt;
+In Fiori 3 Default theme the ToolHeader is with dark design unlike most of the other controls. This defines the usage of limited controls inside it, which will result in good design combination.&lt;br/&gt;
+The ToolHeader stylizes the contained controls with the Shell color parameters, to match the dark design requirement. However, that's not a dark theme.&lt;br/&gt;&lt;br/&gt;
+Only the following controls are supported:
+			&lt;div&gt;
+			&lt;table&gt;
+
+			&lt;tr&gt;
+				&lt;th style="text-align: left;"&gt;Control name&lt;/th&gt;
+				&lt;th style="text-align: left;"&gt;Supported&lt;/th&gt;
+				&lt;th style="text-align: left;"&gt;Not supported&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.Text&lt;/td&gt;
+				&lt;td&gt;Single line text, text truncation&lt;/td&gt;
+				&lt;td&gt;Wrapping&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.Title&lt;/td&gt;
+				&lt;td&gt;Single line text, text truncation. Consider using title headings of H4, H5, H6.&lt;/td&gt;
+				&lt;td&gt;Wrapping&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.Label&lt;/td&gt;
+				&lt;td&gt;Single line text, text truncation&lt;/td&gt;
+				&lt;td&gt;Wrapping&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.ObjectStatus&lt;/td&gt;
+				&lt;td&gt;Labels, semantic colors&lt;/td&gt;
+				&lt;td&gt;Indication colors&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.ui.core.Icon&lt;/td&gt;
+				&lt;td&gt;sap.ui.core.IconColor enumeration for both icons and backgrounds.&lt;/td&gt;
+				&lt;td&gt;Interaction state colors&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.Button&lt;/td&gt;
+				&lt;td&gt;Buttons in their Back, Default, Transparent and Up types. All four types are over-styled to look as transparent buttons.&lt;/td&gt;
+				&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.MenuButton&lt;/td&gt;
+				&lt;td&gt;Emphasized button type. Should be used for triggering Mega menu. If there is no Mega menu, use Title (H6) instead. &lt;/br&gt; Default (over-styled as Transparent) and Transparent types are used for standard menu representation.&lt;/td&gt;
+				&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.Select&lt;/td&gt;
+				&lt;td&gt;Default and IconOnly types. IconOnly looks like a button while Default looks is like an input.&lt;/td&gt;
+				&lt;td&gt;Semantic states&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.SearchField&lt;/td&gt;
+				&lt;td&gt;Support for the regular state of the control.&lt;/td&gt;
+				&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.IconTabHeader&lt;/td&gt;
+				&lt;td&gt;All background design variations (all are transparent). Text tab filters or text and count tab filters in Inline mode only.&lt;/td&gt;
+				&lt;td&gt;Semantic colors, icons and separators.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.f.Avatar/sap.m.Avatar&lt;/td&gt;
+				&lt;td&gt;Support for default (Accent 6) color. Image avatar.&lt;/td&gt;
+				&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;sap.m.Image&lt;/td&gt;
+				&lt;td&gt;Primarily used for displaying the company logo.&lt;/td&gt;
+				&lt;td&gt;Interaction states&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;/table&gt;
+			&lt;/div&gt;</documentation>
+    <since>1.34</since>
+    <baseType>sap.m/OverflowToolbar</baseType>
+</control>

@@ -1,0 +1,195 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Renderer Object</title><link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="themes/sap-default/img/favicon.ico"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="abstract" content="The renderer object is responsible for creating the HTML structure for the control."><meta name="description" content="The renderer object is responsible for creating the HTML structure for the control."><meta name="content category" content="development"><script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"a53ec81aca59413cac86267b0fd5c787.html","previousTopicHref":"b54d7d73eff245d3ab91b96e21177ebf.html"}</script><link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css"><script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script><script type="text/javascript" src="toc-info.js"></script><script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script>
+			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+			    "progress,section,time,video").split(',');
+			  for (var i = 0; i < e.length; i++) {
+			    document.createElement(e[i]);
+			  }
+			</script>
+		<![endif]-->
+        
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+        }
+        func();
+       }
+     }
+     }
+      
+    addLoadEvent(function() { prettyPrint();
+if ($('#local-navigation').length) {
+        $('#local-navigation').navigation();
+    }
+
+
+});
+      
+    </script>
+     <script type="text/javascript" src="js/prettify.js"> </script><script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script><script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head><body class="en-us sap-default centered navigation-default toc-injection enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;"><div id="d4h5-main-container" class="container_12" role="application"><ul id="page-links" class="hidden"><li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li><li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li><li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li></ul><div id="d4h5-section-container" class="grid_12" style="padding-top: 0;"><div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;"><section><div id="content-toolbar" class="toolbar hide-for-small"></div><div class="page topic  - topic-topic " id="loioc9ab34570cc14ea5ab72a6d1a4a03e3f"><h1 class="title topictitle1" hidden>Renderer Object</h1><div class="body"><p class="shortdesc" hidden>The <samp class="ph codeph">renderer</samp> object is responsible for creating the HTML structure for the control.</p>
+<div class="section" id="loioc9ab34570cc14ea5ab72a6d1a4a03e3f__section_lq5_33p_xkb">
+<p class="p">In general, the <samp class="ph codeph">renderer</samp> is a plain object with at least a <samp class="ph codeph">render(oRm, oControl)</samp> method. The
+framework calls this method when the HTML for a control has to be created or updated. Since the same renderer object is used for all
+instances of a control class, the control instance is given as a parameter to the <samp class="ph codeph">render</samp> method. The method should
+use the APIs of the given <samp class="ph codeph">RenderManager</samp> and the current state of the control to describe the necessary HTML. The
+<samp class="ph codeph">RenderManager</samp> then injects that HTML into the page (initial rendering) or updates the existing HTML.</p>
+<p class="p">Additional methods can be added to the <samp class="ph codeph">renderer</samp> object to encapsulate the rendering of parts of a control, such as a
+table&apos;s header or footer or cells. Each could be rendered with a method of their own. This not only structures the renderer, but also
+allows subclasses to modify the HTML creation for individual aspects of the control. When the framework calls the
+<samp class="ph codeph">render</samp> method, the <samp class="ph codeph">this</samp> keyword refers to the renderer object and is used to access the other
+methods.</p>
+<p class="p">When only a single <samp class="ph codeph">render</samp> function is needed, it can be given as value of the <samp class="ph codeph">renderer</samp> function
+without the enclosing renderer object:</p>
+<pre class="pre codeblock prettyprint lang-js">renderer: function(oRm, oControl) {
+    oRm.openStart(&quot;div&quot;, oControl).openEnd().text(oControl.getText()).close(&quot;div&quot;);
+}</pre>
+<div class="p">This notation is only a shorthand for (and internally converted
+to):<pre class="pre codeblock prettyprint">renderer: {
+    render: function(oRm, oControl) {
+        oRm.openStart(&quot;div&quot;, oControl).openEnd().text(oControl.getText()).close(&quot;div&quot;);
+    }
+}</pre></div>
+<p class="p">If an existing renderer is used without modification, you can use the name of the respective renderer class: </p>
+<pre class="pre codeblock prettyprint lang-js">renderer: &quot;sap.m.ButtonRenderer&quot;</pre>
+<p class="p">If the renderer for a control gets more complex, it can be moved into a module of its own. By convention, the module for the renderer
+should be named like the module for the control, but with the additional suffix &quot;Renderer&quot;. The control then should import the
+renderer module and provide it as a value of the <samp class="ph codeph">renderer</samp> property:</p>
+<p class="p">This is shown in the following example. Note that the methods need to be packed together into an object to indicate that they all go
+into the control renderer. The main rendering method is called <samp class="ph codeph">render</samp>. The <samp class="ph codeph">this</samp> keyword refers to
+the control renderer type and is used to access the other methods: </p>
+<pre class="pre codeblock prettyprint lang-js">
+// module &apos;my/lib/MyControl&apos;
+sap.ui.define([`sap/ui/core/Control`, `my/lib/MyControlRenderer`],
+    function(Control, MyControlRenderer) {
+    &quot;use strict&quot;;
+   
+    var MyControl = Control.extend(&quot;my.lib.MyControl&quot;, {
+        
+        // API of the control, as usual
+        metadata: {
+            ...
+        },
+        
+        // refer to imported renderer
+        renderer: MyControlRenderer
+        
+        ...
+    };
+    
+    return MyControl;
+});</pre>
+<pre class="pre codeblock prettyprint lang-js">// module &apos;my/lib/MyControlRenderer&apos;
+sap.ui.define([], function() {
+    &quot;use strict&quot;;
+   
+    var MyControlRenderer = {
+        apiVersion: 2, // explained later
+        render: function(oRm, oControl) {
+            // okay, not really complex, but you get the idea
+            oRm.openStart(&quot;div&quot;, oControl).openEnd().text(oControl.getText()).close(&quot;div&quot;);
+        }
+    };
+    
+    return MyControlRenderer;
+});</pre>
+<p class="p">When using this approach, be careful not to create a cyclic dependency between control and renderer modules. The control should depend
+on the renderer, and the render can use methods from the control&apos;s instance, but not from the control module.</p>
+<p class="p">The <samp class="ph codeph">RenderManager</samp> provides two flavors of APIs to describe the HTML for a control. There&apos;s an older one which used
+string concatenation to build HTML markup and converted it into DOM by using <samp class="ph codeph">innerHTML</samp>. The method names of the old
+API were quite verbose and the API required callers to take care of cross-site scripting (XSS) protection by calling the appropriate
+encoding methods. There is a newer API that is better aligned with native DOM APIs. It is backed by different implementations in the
+<samp class="ph codeph">RenderManager</samp> that either create a markup string for initial rendering or patch existing DOMs in case of smaller
+updates. The API also hides the need for XSS protection in most cases from the control developer.</p>
+<p class="p">All new code should exclusively use the new API (and the two APIs must never be mixed within a single renderer). If, in addition, the
+detailed contract that is described in the <span class="ph uicontrol">API Reference</span> for the <span class="ph"><a class="xref" href="../../#/api/sap.ui.core.RenderManager" target="_top" alt="#/api/sap.ui.core.RenderManager" title="#/api/sap.ui.core.RenderManager">
+<samp class="ph codeph">RenderManager</samp></a>,</span>
+is understood and fulfilled, a
+renderer should declare this by setting the <samp class="ph codeph">apiVersion:2</samp> flag in the renderer object. If a given control hierarchy
+(including inherited renderers) aligns on this flag, a more efficient rendering approach will be chosen by the framework. In mixed
+scenarios, the legacy rendering will be used. Examples in this documentation all set this flag, but before setting it in your code,
+make yourself familiar with the required contract!</p>
+</div>
+<div class="section" id="loioc9ab34570cc14ea5ab72a6d1a4a03e3f__section_qjd_j3p_xkb"><section class="section" type="HTML Structure"><h2 class="section_title" style="font-size: 1.15em;">HTML Structure</h2>
+
+<p class="p">A control must have exactly one HTML element as a root node. Additional elements may be added as children of this node. The root
+element is created by calling the <samp class="ph codeph">oRM.openStart(&quot;&lt;tagName/&gt;&quot;, oControl)</samp> method with the control instance as second
+parameter. This parameter lets the <samp class="ph codeph">RenderManager</samp> add additional attributes to the element that mark it as a UI5
+control and associate it with the control instance. Also, the <samp class="ph codeph">RenderManager</samp> will take care of custom style classes
+added to the control (with <samp class="ph codeph">addStyleClass()</samp>).</p>
+</section></div>
+<div class="section" id="loioc9ab34570cc14ea5ab72a6d1a4a03e3f__section_fbf_p3p_xkb"><section class="section" type="Inheritance"><h2 class="section_title" style="font-size: 1.15em;">Inheritance</h2>
+
+<p class="p">A new renderer type can inherit from the renderer of the parent control. If a control extends, for example, the
+<samp class="ph codeph">InputBase</samp> control, its renderer object can inherit all methods from <samp class="ph codeph">sap.m.InputBaseRenderer</samp> and
+can access them.</p>
+<p class="p">When the renderer is embedded into the control class definition, it automatically inherits from the renderer of the base class of the
+control.</p>
+<div class="p">When the renderer is defined in a module of its own, it can explicitly define the base renderer that it wants to inherit from by using
+the <samp class="ph codeph">Renderer.extend</samp> method of the <samp class="ph codeph">sap/ui/core/Renderer</samp>
+module:<pre class="pre codeblock prettyprint lang-js">sap.ui.define([&apos;sap/ui/core/Renderer&apos;, &apos;sap/m/InputBaseRenderer&apos;],
+                function(Renderer, InputBaseRenderer) {
+                &quot;use strict&quot;;
+                
+                var CustomInputRenderer = Renderer.extend(InputBaseRenderer);
+                ...
+                return CustomInputRenderer;
+}, /* bExport= */ true);</pre></div>
+<p class="p">Alternatively, the renderer can be defined as a plain object. When such a plain renderer object is then imported in a control
+definition (as described above), there&apos;s no difference to the embedded case: It will automatically inherit from the renderer of the
+control&apos;s base class. </p>
+</section></div>
+</div><div class="related-links"> <div class="relinfo"><div class="relinfotitle ">Related Information</div><div><a class="link" href="../../#/api/sap.ui.core.RenderManager" target="_top" alt="#/api/sap.ui.core.RenderManager" title="#/api/sap.ui.core.RenderManager">API Reference: <samp class="ph codeph">sap.ui.core.RenderManager</samp></a></div><div><a class="link" href="../../#/api/sap.ui.core.Renderer" target="_top" alt="#/api/sap.ui.core.Renderer" title="#/api/sap.ui.core.Renderer">API Reference: <samp class="ph codeph">sap.ui.core.Renderer</samp></a></div></div></div></div></section><div class="clear"></div>
+</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="footer-container" class="grid_12"><footer>
+	<div id="custom-footerSpacer"></div>
+	
+</footer>
+</div></body></html>

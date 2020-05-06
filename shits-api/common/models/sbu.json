@@ -1,0 +1,22 @@
+{
+  "name": "sbu",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sbuName": {
+      "type": "string",
+      "required": true
+    },
+    "sbuOwner": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

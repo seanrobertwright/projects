@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>IconColor</name>
+    <derived/>
+    <documentation>Semantic Colors of an icon.</documentation>
+    <enumeration>
+        <value name="Default">
+            <documentation>Default color (brand color)</documentation>
+        </value>
+        <value name="Positive">
+            <documentation>Positive color</documentation>
+        </value>
+        <value name="Negative">
+            <documentation>Negative color</documentation>
+        </value>
+        <value name="Critical">
+            <documentation>Critical color</documentation>
+        </value>
+        <value name="Neutral">
+            <documentation>Neutral color.</documentation>
+        </value>
+        <value name="Contrast">
+            <documentation>Contrast color.</documentation>
+        </value>
+        <value name="NonInteractive" since="1.76">
+            <documentation>Color that indicates an icon which isn't interactive</documentation>
+        </value>
+        <value name="Tile" since="1.76">
+            <documentation>Color for icon used in a Tile</documentation>
+        </value>
+        <value name="Marker" since="1.76">
+            <documentation>Color for icon used as a marker</documentation>
+        </value>
+    </enumeration>
+</simple-type>

@@ -1,0 +1,348 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>What&apos;s New in OpenUI5 1.76</title><link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="themes/sap-default/img/favicon.ico"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="abstract" content="With this release OpenUI5 is upgraded from version 1.75 to 1.76."><meta name="description" content="With this release OpenUI5 is upgraded from version 1.75 to 1.76."><meta name="content category" content="development"><script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"dc3d3ce46105441db5543049fb1c11e7.html","previousTopicHref":"99ac68a5b1c3416ab5c84c99fefa250d.html"}</script><link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css"><script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script><script type="text/javascript" src="toc-info.js"></script><script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script>
+			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+			    "progress,section,time,video").split(',');
+			  for (var i = 0; i < e.length; i++) {
+			    document.createElement(e[i]);
+			  }
+			</script>
+		<![endif]-->
+        
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+        }
+        func();
+       }
+     }
+     }
+      
+    addLoadEvent(function() { prettyPrint();
+if ($('#local-navigation').length) {
+        $('#local-navigation').navigation();
+    }
+$('.collapsible').collapsify({"expandText":"Display Content","collapseText":"Hide Content","codeblockText":"Code Sample","codeblockCopyText":"Copy code to clipboard","codeblockSelectText":"Select code for copying to clipboard"});
+
+
+});
+      
+    </script>
+     <script type="text/javascript" src="js/prettify.js"> </script><script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script><script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head><body class="en-us sap-default centered navigation-default toc-injection enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;"><div id="d4h5-main-container" class="container_12" role="application"><ul id="page-links" class="hidden"><li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li><li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li><li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li></ul><div id="d4h5-section-container" class="grid_12" style="padding-top: 0;"><div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;"><section><div id="content-toolbar" class="toolbar hide-for-small"></div><div class="page concept  - topic-topic concept-concept " id="loiob9b0a3f223c14b9d99e0d86e649cafec"><h1 class="title topictitle1" hidden>What&apos;s New in <span class="ph"><span class="ph pname">OpenUI5</span></span>
+1.76</h1><div class="body conbody" id="loiob9b0a3f223c14b9d99e0d86e649cafec__Conbody_WN_SAPUI5_176"><p class="shortdesc" hidden>With
+this release <span class="ph"><span class="ph pname">OpenUI5</span></span> is upgraded
+from version 1.75 to 1.76.</p>
+<div class="section collapsible expanded" id="loiob9b0a3f223c14b9d99e0d86e649cafec__section_yxw_pxt_zcb"><section class="section collapsible expanded" type="New Features"><h2 class="section_title" style="font-size: 1.15em;">New Features</h2><div class="table-wrapper tablenoborder"><table summary id="loiob9b0a3f223c14b9d99e0d86e649cafec__table_krd_ltq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">Team Calendar</samp></span><p class="p">We have
+enabled custom colors to be used with the
+<samp class="ph codeph">specialDates</samp> aggregation in
+<samp class="ph codeph">sap.m.PlanningCalendar</samp>,
+<samp class="ph codeph">sap.m.SinglePlanningCalendar</samp>, and
+<samp class="ph codeph">sap.ui.unified.Calendar</samp> controls. This
+enhancement harmonizes with the <samp class="ph codeph">legend</samp>
+aggregation where custom colors were already available. It is
+implemented with the new <samp class="ph codeph">color</samp> property of type
+<samp class="ph codeph">sap.ui.core.CSSColor</samp> in the
+<samp class="ph codeph">sap.ui.unified.DateTypeRange</samp> control. <span class="ph">Find it in the <a class="xref" href="https://sapui5.hana.ondemand.com/#demoapps" target="_blank" alt="https://sapui5.hana.ondemand.com/#demoapps" title="https://sapui5.hana.ondemand.com/#demoapps">Demo
+Apps</a>.</span></p></td>
+</tr>
+</tbody></table></div></section></div>
+<div class="section collapsible expanded" id="loiob9b0a3f223c14b9d99e0d86e649cafec__section_qwl_pb5_zcb"><section class="section collapsible expanded" type="Improved Features"><h2 class="section_title" style="font-size: 1.15em;">Improved Features</h2><div class="table-wrapper tablenoborder"><table summary id="loiob9b0a3f223c14b9d99e0d86e649cafec__table_tpj_dvq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">Card Explorer</samp></span><div class="p"><ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_wvq_z14_blb">
+<li class="li">The Component card sample in the Explore section has
+been enhanced. To facilitate developers, we have added
+the option to download the bundle of all the files in
+the sample.</li>
+<li class="li">All the properties in the Learn section are now listed
+with their Since attribute. This will inform developers
+since which version each feature is available.</li>
+</ul><span class="ph"> For more information, see <a class="xref" href="../../test-resources/sap/ui/integration/demokit/cardExplorer/index.html" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/index.html" title="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/index.html">Card
+Explorer</a>.</span></div></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis">One Page Acceptance Tests (OPA5)</span></p>
+<p class="p">We&apos;ve introduced <samp class="ph codeph">Drag</samp> and <samp class="ph codeph">Drop</samp>
+actions to OPA5 to help with the most common cases. For more
+information, see <a class="xref" href="../../#/topic/8615a0b9088645ae936dbb8bbce5d01d.html" title="OPA5 has a built-in actions parameter that can be used for simulating events. If you use an action, OPA5 makes sure that the UI is in a state that allows the action to be executed." target="_top">Simulating User Interactions on Controls</a><span class="ph">, the <a class="xref" href="../../#/api/sap.ui.test.actions" target="_top" alt="#/api/sap.ui.test.actions" title="#/api/sap.ui.test.actions">API Reference</a> and
+the <a class="xref" href="../../#/entity/sap.ui.test.Opa5/sample/sap.ui.core.sample.OpaAction" target="_top" alt="#/entity/sap.ui.test.Opa5/sample/sap.ui.core.sample.OpaAction" title="#/entity/sap.ui.test.Opa5/sample/sap.ui.core.sample.OpaAction">Sample</a></span>.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><span class="ph"><span class="ph pname">OpenUI5</span></span> OData V2 Model</span></p>
+<p class="p">The new version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V2 model introduces the following features:</p>
+<ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_hvg_lc2_1lb">
+<li class="li">A new <samp class="ph codeph">transitionMessagesOnly</samp> binding
+parameter is provided for the
+<samp class="ph codeph">sap.ui.model.odata.v2.ODataListBinding</samp>
+class.</li>
+<li class="li">The <samp class="ph codeph">updateAggregatedMessages</samp> parameter of
+<samp class="ph codeph">sap.ui.model.odata.v2.ODataModel#read</samp>
+is now public.</li>
+<li class="li">Existing server messages can be retrieved from the model
+using the <samp class="ph codeph">sap.ui.model.Context#getMessages</samp>
+method.</li>
+</ul>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 Model</span></p>
+<p class="p">The new version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 model introduces the following features:</p>
+<ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_mfh_zdl_rhb">
+<li class="li">You can now access the binding parameter of an operation, as
+described in <a class="xref" href="../../#/topic/b54f7895b7594c61a83fa7257fa9d13f.html" title="The OData V4 model supports OData operations (ActionImport, FunctionImport, bound Actions and bound Functions). Unbound parameters are limited to primitive values." target="_top">OData Operations</a>.</li>
+<li class="li">A property path provided to
+<samp class="ph codeph">sap.ui.model.odata.v4.Context#requestSideEffects</samp>
+can be given the suffix &quot;<samp class="ph codeph">*</samp>&quot; to enforce
+re-reading of all properties of the related entity. <p class="p">For more information, see the <a class="xref" href="../../#/api/sap.ui.model.odata.v4.Context%23methods/requestSideEffects" target="_top" alt="#/api/sap.ui.model.odata.v4.Context%23methods/requestSideEffects" title="#/api/sap.ui.model.odata.v4.Context%23methods/requestSideEffects">API
+Reference</a>.</p></li>
+</ul>
+<aside class="note restriction" aria-labelledby="note_0_title"><div class="title" id="note_0_title"><strong>Restriction</strong></div>
+<p>Due to the limited feature scope of this
+version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 model, check that all required features are in place
+before developing applications. Double-check the detailed
+documentation of the features, as certain parts of a feature may
+be missing. While we aim to be compatible with existing
+controls, some controls might not work due to small
+incompatibilities compared to
+<samp class="ph codeph">sap.ui.model.odata.(v2.)ODataModel</samp>, or due
+to missing features in the model (such as tree binding). This
+also applies to controls such as
+<samp class="ph codeph">TreeTable</samp> and
+<samp class="ph codeph">AnalyticalTable</samp>, which are not supported in
+combination with the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4 model. The interface for applications has been
+changed for easier and more efficient use of the model. For a
+summary of these changes, see <a class="xref" href="../../#/topic/abd4d7c7548d4c29ab8364d3904a6d74.html" title="This section outlines the main differences between the OData V2 and OData V4 models." target="_top">Changes Compared to OData V2 Model</a>.</p></aside>
+<p class="p">For more information, see <a class="xref" href="../../#/topic/5de13cf4dd1f4a3480f7e2eaaee3f5b8.html" title="The sap.ui.model.odata.v4.ODataModel is the model implementation for consuming an OData V4 service." target="_top">OData V4 Model</a>, the <a class="xref" href="../../#/api/sap.ui.model.odata.v4" target="_top" alt="#/api/sap.ui.model.odata.v4" title="#/api/sap.ui.model.odata.v4">API Reference</a>, and
+the <a class="xref" href="../../#/entity/sap.ui.model.odata.v4.ODataModel" target="_top" alt="#/entity/sap.ui.model.odata.v4.ODataModel" title="#/entity/sap.ui.model.odata.v4.ODataModel">Samples</a> in the Demo
+Kit.</p>
+</td>
+</tr>
+</tbody></table></div></section></div>
+<div class="section collapsible expanded" id="loiob9b0a3f223c14b9d99e0d86e649cafec__section_rqn_wd5_zcb"><section class="section collapsible expanded" type="Improved Controls"><h2 class="section_title" style="font-size: 1.15em;">Improved Controls</h2><div class="table-wrapper tablenoborder"><table summary id="loiob9b0a3f223c14b9d99e0d86e649cafec__table_qcq_dvq_mfb" class="table pgwide" width="100%" style="table-layout:auto;" frame="border" border="1" rules="all"><colgroup><col width="100%"></colgroup><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.f.FlexibleColumnLayout</samp></span></p>
+<ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_jln_51y_1lb">
+<li class="li">
+<p class="p">With the new <samp class="ph codeph">autoFocus</samp> property, we&#x2019;ve
+introduced the possibility to enable/disable the
+autofocus functionality of the
+<samp class="ph codeph">FlexibleColumnLayout</samp> control.<span class="ph"> For more information, see the <a class="xref" href="../../#/api/sap.f.FlexibleColumnLayout" target="_top" alt="#/api/sap.f.FlexibleColumnLayout" title="#/api/sap.f.FlexibleColumnLayout">API
+Reference</a> and the <a class="xref" href="../../#/entity/sap.f.FlexibleColumnLayout/sample/sap.f.sample.FlexibleColumnLayoutWithOneColumnStart" target="_top" alt="#/entity/sap.f.FlexibleColumnLayout/sample/sap.f.sample.FlexibleColumnLayoutWithOneColumnStart" title="#/entity/sap.f.FlexibleColumnLayout/sample/sap.f.sample.FlexibleColumnLayoutWithOneColumnStart">Sample</a>.</span></p>
+</li>
+<li class="li">
+<p class="p">We&#x2019;ve introduced the <samp class="ph codeph">columnResize</samp> event,
+which is fired when the resizing of each column of the
+control is complete.<span class="ph"> For more information, see the <a class="xref" href="../../#/api/sap.f.FlexibleColumnLayout%23events/columnResize" target="_top" alt="#/api/sap.f.FlexibleColumnLayout%23events/columnResize" title="#/api/sap.f.FlexibleColumnLayout%23events/columnResize">API
+Reference</a>.</span></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.FacetFilter</samp></span><p class="p">Optimization
+regarding the initial database service query has been
+introduced. There are cases when the <samp class="ph codeph">items</samp>
+aggregation for the <samp class="ph codeph">FacetFilterList</samp> could take
+a long time fetching data from the database service. Now we have
+added &#x430; <samp class="ph codeph">search</samp> event, that fires when the
+<samp class="ph codeph">FacetFilterList</samp> is opened. This enables
+developers to register a handler function to prevent the default
+filtering behavior by calling the
+<samp class="ph codeph">sap.ui.base.Event.prototype.preventDefault</samp>
+function. As a result, no list items are loaded initially. In
+this case, the developers have to define the filtering behavior
+at the application level inside the <samp class="ph codeph">search</samp>
+event handler function. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.m.FacetFilter" target="_top" alt="#/api/sap.m.FacetFilter" title="#/api/sap.m.FacetFilter">API Reference</a> and
+the <a class="xref" href="../../#/entity/sap.m.FacetFilter" target="_top" alt="#/entity/sap.m.FacetFilter" title="#/entity/sap.m.FacetFilter">Samples</a>.</span></p></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.List, sap.m.Table,
+sap.m.Tree</samp></span></p>
+<p class="p">New indication colors are now available (provided by the
+<samp class="ph codeph">sap.ui.core.IndicationColor</samp> enumeration)
+that can be used for highlighting table rows. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.ui.core.IndicationColor" target="_top" alt="#/api/sap.ui.core.IndicationColor" title="#/api/sap.ui.core.IndicationColor">API
+Reference</a>.</span></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.plugins.DataStateIndicator</samp></span></p><p class="p">We
+made some improvements to this plugin class and the messages
+shown for the data state:</p><ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_alw_w52_blb">
+<li class="li">
+<p class="p">A new refresh function of the messages for each data
+state is available that re-evaluates the filter and then
+refreshes the message strip based on that
+information.</p>
+</li>
+<li class="li">
+<p class="p">The <samp class="ph codeph">filter</samp> property that is defined by
+the application can now also take the related control
+into account, along with the message, using the
+respective parameters.</p>
+</li>
+</ul><span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.m.plugins.DataStateIndicator" target="_top" alt="#/api/sap.m.plugins.DataStateIndicator" title="#/api/sap.m.plugins.DataStateIndicator">API
+Reference</a>.</span></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.Table</samp></span></p>
+<p class="p">An automatic pop-in mode has been enabled for the responsive
+table. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.m.Table%23methods/getAutoPopinMode" target="_top" alt="#/api/sap.m.Table%23methods/getAutoPopinMode" title="#/api/sap.m.Table%23methods/getAutoPopinMode">API Reference</a> for
+the related method, the <a class="xref" href="../../#/api/sap.m.Column%23controlProperties" target="_top" alt="#/api/sap.m.Column%23controlProperties" title="#/api/sap.m.Column%23controlProperties">API Reference</a> for
+the related properties, and the <a class="xref" href="../../#/entity/sap.m.Table/sample/sap.m.sample.TableAutoPopin" target="_top" alt="#/entity/sap.m.Table/sample/sap.m.sample.TableAutoPopin" title="#/entity/sap.m.Table/sample/sap.m.sample.TableAutoPopin">Sample</a>.</span></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.integration.widgets.Card</samp></span><ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_er5_x4z_1lb">
+<li class="li">We have added a <samp class="ph codeph">type</samp> property for the
+configuration parameters inside a card. This property
+defines the data type of the parameter. Currently the
+<samp class="ph codeph">type</samp> property is used only in UI
+adaptation at design time. There is no runtime data type
+validation yet. <span class="ph">For more information, see the <a class="xref" href="../../test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/manifestParameters" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/manifestParameters" title="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/manifestParameters">Manifest
+Parameters</a></span> section in the Card
+Explorer.</li>
+<li class="li">We have added support for the destinations to be resolved by the host environment. In
+the manifest, the card developer indicates the name of the
+destination and the request, which depends on this
+destination. On the host environment side, the host
+application developer creates a method that resolves the
+given destination name to a URL. <span class="ph">For more information, see <a class="xref" href="../../test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/destinations" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/destinations" title="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/destinations">Destinations</a></span> in the Card Explorer.</li>
+<li class="li">We have introduced optional application-level host actions,
+that are dependent on the host environment. Examples may
+include, but are not limited to, options such as sharing or
+removing a card. <span class="ph">For more information, see <a class="xref" href="../../test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/hostActions" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/hostActions" title="https://sapui5.hana.ondemand.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/hostActions">Host
+Actions</a></span> in the Card Explorer.</li>
+<li class="li">A new <samp class="ph codeph">JsonDateTime</samp> parser is now used to
+properly parse dates. Some <samp class="ph codeph">DateTime</samp> values
+may appear in JSON files in the form of
+<samp class="ph codeph">/Date(700000+0500)/</samp> strings. The parser
+automatically splits the date string into parts, taking into
+account the time zone offset if present, and returns a valid
+date object.</li>
+</ul></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.table.AnalyticalTable,
+sap.ui.table.Table,
+sap.ui.table.TreeTable</samp></span></p>
+<ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_zy4_yjf_blb">
+<li class="li">
+<p class="p">New indication colors are now available (provided by the
+<samp class="ph codeph">sap.ui.core.IndicationColor</samp>
+enumeration) that can be used for highlighting table
+rows. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.ui.core.IndicationColor" target="_top" alt="#/api/sap.ui.core.IndicationColor" title="#/api/sap.ui.core.IndicationColor">API
+Reference</a>.</span></p>
+</li>
+<li class="li">
+<p class="p">The resizing of columns has been changed to improve the
+usability on tablet devices.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.table.AnalyticalTable,
+sap.ui.table.Table,
+sap.ui.table.TreeTable</samp></span></p><p class="p"><samp class="ph codeph">sap.ui.table.plugins.MultiSelectionPlugin</samp>
+for these tables has been enhanced and now provides the
+following functions:</p><ul class="ul" id="loiob9b0a3f223c14b9d99e0d86e649cafec__ul_ns4_pdd_1lb">
+<li class="li">
+<p class="p">The selection of indices outside of data boundaries is
+now no longer possible, because the binding length is
+taken into account.</p>
+</li>
+<li class="li">
+<p class="p">A validation takes place to prevent errors from occurring
+due to the selection of unsuitable parameters.</p>
+</li>
+<li class="li">
+<p class="p">Methods that change the selection now return a
+<samp class="ph codeph">Promise</samp> that is resolved after a
+selection has been made.</p>
+</li>
+<li class="li">
+<p class="p">A <samp class="ph codeph">customPayload</samp> parameter has been added
+to the <samp class="ph codeph">selectionChange</samp> event to allow
+event listeners to make use of custom event data.</p>
+</li>
+</ul><span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.ui.table.plugins.MultiSelectionPlugin" target="_top" alt="#/api/sap.ui.table.plugins.MultiSelectionPlugin" title="#/api/sap.ui.table.plugins.MultiSelectionPlugin">API Reference</a> and the
+<a class="xref" href="../../#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.MultiSelectionPlugin" target="_top" alt="#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.MultiSelectionPlugin" title="#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.MultiSelectionPlugin">Sample</a>.</span></td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.unified.calendar.Month</samp></span><p class="p">We
+have enabled custom colors to be used with the
+<samp class="ph codeph">specialDates</samp> aggregation in
+<samp class="ph codeph">sap.m.PlanningCalendar</samp>,
+<samp class="ph codeph">sap.m.SinglePlanningCalendar</samp>, and
+<samp class="ph codeph">sap.ui.unified.Calendar</samp> controls. This
+enhancement harmonizes with the <samp class="ph codeph">legend</samp>
+aggregation where custom colors were already available. It is
+implemented with the new <samp class="ph codeph">color</samp> property of type
+<samp class="ph codeph">sap.ui.core.CSSColor</samp> in the
+<samp class="ph codeph">sap.ui.unified.DateTypeRange</samp> control. <span class="ph">For more information, see the <a class="xref" href="../../#/api/sap.ui.unified.DateTypeRange" target="_top" alt="#/api/sap.ui.unified.DateTypeRange" title="#/api/sap.ui.unified.DateTypeRange">API Reference</a> and
+the <a class="xref" href="../../#/entity/sap.m.PlanningCalendar" target="_top" alt="#/entity/sap.m.PlanningCalendar" title="#/entity/sap.m.PlanningCalendar">Samples</a>.</span></p></td>
+</tr>
+</tbody></table></div></section></div>
+</div></div></section><div class="clear"></div>
+</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="footer-container" class="grid_12"><footer>
+	<div id="custom-footerSpacer"></div>
+	
+</footer>
+</div></body></html>

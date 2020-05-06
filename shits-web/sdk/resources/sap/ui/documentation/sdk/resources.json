@@ -1,0 +1,1056 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"size": 4820,
+			"isDebug": true
+		},
+		{
+			"name": "Component.js",
+			"size": 2307
+		},
+		{
+			"name": "blocks/IndexEntry-dbg.js",
+			"size": 760,
+			"isDebug": true
+		},
+		{
+			"name": "blocks/IndexEntry.js",
+			"size": 584
+		},
+		{
+			"name": "blocks/IndexEntry.view.xml",
+			"size": 890
+		},
+		{
+			"name": "controller/ApiDetail-dbg.controller.js",
+			"size": 24152,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ApiDetail.controller.js",
+			"size": 9595
+		},
+		{
+			"name": "controller/ApiDetailIndexDeprecatedExperimental-dbg.controller.js",
+			"size": 5258,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ApiDetailIndexDeprecatedExperimental.controller.js",
+			"size": 2408
+		},
+		{
+			"name": "controller/ApiDetailInitial-dbg.controller.js",
+			"size": 1332,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ApiDetailInitial.controller.js",
+			"size": 641
+		},
+		{
+			"name": "controller/ApiMaster-dbg.controller.js",
+			"size": 7471,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ApiMaster.controller.js",
+			"size": 4041
+		},
+		{
+			"name": "controller/App-dbg.controller.js",
+			"size": 29069,
+			"isDebug": true
+		},
+		{
+			"name": "controller/App.controller.js",
+			"size": 17514
+		},
+		{
+			"name": "controller/BaseController-dbg.js",
+			"size": 6832,
+			"isDebug": true
+		},
+		{
+			"name": "controller/BaseController.js",
+			"size": 2912
+		},
+		{
+			"name": "controller/Code-dbg.controller.js",
+			"size": 6792,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Code.controller.js",
+			"size": 3836
+		},
+		{
+			"name": "controller/Controls-dbg.controller.js",
+			"size": 1826,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Controls.controller.js",
+			"size": 866
+		},
+		{
+			"name": "controller/ControlsMaster-dbg.controller.js",
+			"size": 23349,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ControlsMaster.controller.js",
+			"size": 12058
+		},
+		{
+			"name": "controller/DemoApps-dbg.controller.js",
+			"size": 11154,
+			"isDebug": true
+		},
+		{
+			"name": "controller/DemoApps.controller.js",
+			"size": 4845
+		},
+		{
+			"name": "controller/Downloads-dbg.controller.js",
+			"size": 725,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Downloads.controller.js",
+			"size": 464
+		},
+		{
+			"name": "controller/Entity-dbg.controller.js",
+			"size": 17056,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Entity.controller.js",
+			"size": 8120
+		},
+		{
+			"name": "controller/ErrorHandler-dbg.js",
+			"size": 2278,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ErrorHandler.js",
+			"size": 1051
+		},
+		{
+			"name": "controller/Group-dbg.controller.js",
+			"size": 958,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Group.controller.js",
+			"size": 485
+		},
+		{
+			"name": "controller/License-dbg.controller.js",
+			"size": 1124,
+			"isDebug": true
+		},
+		{
+			"name": "controller/License.controller.js",
+			"size": 892
+		},
+		{
+			"name": "controller/LiveEditor-dbg.controller.js",
+			"size": 7049,
+			"isDebug": true
+		},
+		{
+			"name": "controller/LiveEditor.controller.js",
+			"size": 3284
+		},
+		{
+			"name": "controller/MasterTreeBaseController-dbg.js",
+			"size": 4956,
+			"isDebug": true
+		},
+		{
+			"name": "controller/MasterTreeBaseController.js",
+			"size": 2223
+		},
+		{
+			"name": "controller/NotFound-dbg.controller.js",
+			"size": 321,
+			"isDebug": true
+		},
+		{
+			"name": "controller/NotFound.controller.js",
+			"size": 282
+		},
+		{
+			"name": "controller/ReleaseNotes-dbg.controller.js",
+			"size": 5607,
+			"isDebug": true
+		},
+		{
+			"name": "controller/ReleaseNotes.controller.js",
+			"size": 3072
+		},
+		{
+			"name": "controller/Sample-dbg.controller.js",
+			"size": 12745,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Sample.controller.js",
+			"size": 6299
+		},
+		{
+			"name": "controller/SampleBaseController-dbg.js",
+			"size": 5265,
+			"isDebug": true
+		},
+		{
+			"name": "controller/SampleBaseController.js",
+			"size": 3176
+		},
+		{
+			"name": "controller/SearchPage-dbg.controller.js",
+			"size": 9670,
+			"isDebug": true
+		},
+		{
+			"name": "controller/SearchPage.controller.js",
+			"size": 5023
+		},
+		{
+			"name": "controller/SubApiDetail-dbg.controller.js",
+			"size": 20801,
+			"isDebug": true
+		},
+		{
+			"name": "controller/SubApiDetail.controller.js",
+			"size": 11049
+		},
+		{
+			"name": "controller/TermsOfUse-dbg.controller.js",
+			"size": 990,
+			"isDebug": true
+		},
+		{
+			"name": "controller/TermsOfUse.controller.js",
+			"size": 731
+		},
+		{
+			"name": "controller/Tools-dbg.controller.js",
+			"size": 1678,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Tools.controller.js",
+			"size": 797
+		},
+		{
+			"name": "controller/TopicDetail-dbg.controller.js",
+			"size": 5185,
+			"isDebug": true
+		},
+		{
+			"name": "controller/TopicDetail.controller.js",
+			"size": 2560
+		},
+		{
+			"name": "controller/TopicDetailInitial-dbg.controller.js",
+			"size": 2965,
+			"isDebug": true
+		},
+		{
+			"name": "controller/TopicDetailInitial.controller.js",
+			"size": 1515
+		},
+		{
+			"name": "controller/TopicMaster-dbg.controller.js",
+			"size": 4666,
+			"isDebug": true
+		},
+		{
+			"name": "controller/TopicMaster.controller.js",
+			"size": 2491
+		},
+		{
+			"name": "controller/Welcome-dbg.controller.js",
+			"size": 3066,
+			"isDebug": true
+		},
+		{
+			"name": "controller/Welcome.controller.js",
+			"size": 1601
+		},
+		{
+			"name": "controller/util/APIInfo-dbg.js",
+			"size": 4012,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/APIInfo.js",
+			"size": 1931
+		},
+		{
+			"name": "controller/util/ConfigUtil-dbg.js",
+			"size": 1983,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/ConfigUtil.js",
+			"size": 1224
+		},
+		{
+			"name": "controller/util/ControlsInfo-dbg.js",
+			"size": 12765,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/ControlsInfo.js",
+			"size": 6088
+		},
+		{
+			"name": "controller/util/EntityInfo-dbg.js",
+			"size": 9900,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/EntityInfo.js",
+			"size": 5081
+		},
+		{
+			"name": "controller/util/Highlighter-dbg.js",
+			"size": 8515,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/Highlighter.js",
+			"size": 4937
+		},
+		{
+			"name": "controller/util/IndexWorker-dbg.js",
+			"size": 11690,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/IndexWorker.js",
+			"size": 4253
+		},
+		{
+			"name": "controller/util/JSDocUtil-dbg.js",
+			"size": 2755,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/JSDocUtil.js",
+			"size": 1039
+		},
+		{
+			"name": "controller/util/SearchUtil-dbg.js",
+			"size": 1911,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/SearchUtil.js",
+			"size": 927
+		},
+		{
+			"name": "controller/util/TreeUtil-dbg.js",
+			"size": 1781,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/TreeUtil.js",
+			"size": 727
+		},
+		{
+			"name": "controller/util/XML2JSONUtils-dbg.js",
+			"size": 4523,
+			"isDebug": true
+		},
+		{
+			"name": "controller/util/XML2JSONUtils.js",
+			"size": 1858
+		},
+		{
+			"name": "controls/BorrowedList-dbg.js",
+			"size": 1263,
+			"isDebug": true
+		},
+		{
+			"name": "controls/BorrowedList.js",
+			"size": 697
+		},
+		{
+			"name": "controls/DemokitTreeItem-dbg.js",
+			"size": 1332,
+			"isDebug": true
+		},
+		{
+			"name": "controls/DemokitTreeItem.js",
+			"size": 860
+		},
+		{
+			"name": "controls/DemokitTreeItemRenderer-dbg.js",
+			"size": 1714,
+			"isDebug": true
+		},
+		{
+			"name": "controls/DemokitTreeItemRenderer.js",
+			"size": 1121
+		},
+		{
+			"name": "controls/JSDocText-dbg.js",
+			"size": 1422,
+			"isDebug": true
+		},
+		{
+			"name": "controls/JSDocText.js",
+			"size": 658
+		},
+		{
+			"name": "controls/LightTable-dbg.js",
+			"size": 2456,
+			"isDebug": true
+		},
+		{
+			"name": "controls/LightTable.js",
+			"size": 1170
+		},
+		{
+			"name": "controls/ObjectPageSubSection-dbg.js",
+			"size": 1526,
+			"isDebug": true
+		},
+		{
+			"name": "controls/ObjectPageSubSection.js",
+			"size": 905
+		},
+		{
+			"name": "controls/ParamText-dbg.js",
+			"size": 3849,
+			"isDebug": true
+		},
+		{
+			"name": "controls/ParamText.js",
+			"size": 1874
+		},
+		{
+			"name": "controls/Row-dbg.js",
+			"size": 848,
+			"isDebug": true
+		},
+		{
+			"name": "controls/Row.js",
+			"size": 452
+		},
+		{
+			"name": "controls/Search-dbg.js",
+			"size": 7235,
+			"isDebug": true
+		},
+		{
+			"name": "controls/Search.js",
+			"size": 3028
+		},
+		{
+			"name": "controls/TitleLink-dbg.js",
+			"size": 6487,
+			"isDebug": true
+		},
+		{
+			"name": "controls/TitleLink.js",
+			"size": 2503
+		},
+		{
+			"name": "controls/WebPageTitleUtil-dbg.js",
+			"size": 821,
+			"isDebug": true
+		},
+		{
+			"name": "controls/WebPageTitleUtil.js",
+			"size": 464
+		},
+		{
+			"name": "css/stars.png",
+			"size": 163318
+		},
+		{
+			"name": "css/style.css",
+			"size": 56550
+		},
+		{
+			"name": "fonts/BusinessSuiteInAppSymbolsSmall.eot",
+			"size": 5632
+		},
+		{
+			"name": "fonts/BusinessSuiteInAppSymbolsSmall.ttf",
+			"size": 5376
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"size": 1709
+		},
+		{
+			"name": "images/API_ref_M_and_L_cropped.jpg",
+			"size": 66222
+		},
+		{
+			"name": "images/API_ref_M_and_L_cropped_1.jpg",
+			"size": 140626
+		},
+		{
+			"name": "images/API_ref_S_cropped.jpg",
+			"size": 18119
+		},
+		{
+			"name": "images/API_ref_S_cropped_1.jpg",
+			"size": 72757
+		},
+		{
+			"name": "images/DemoApps_M_and_L_cropped.png",
+			"size": 662944
+		},
+		{
+			"name": "images/DemoApps_S_cropped.png",
+			"size": 165015
+		},
+		{
+			"name": "images/Docu_M_and_L_cropped.jpg",
+			"size": 57038
+		},
+		{
+			"name": "images/Docu_M_and_L_cropped_1.jpg",
+			"size": 123999
+		},
+		{
+			"name": "images/Docu_S_cropped.jpg",
+			"size": 17644
+		},
+		{
+			"name": "images/Docu_S_cropped_1.jpg",
+			"size": 35995
+		},
+		{
+			"name": "images/Evolution_demokit_illustration_single.png",
+			"size": 26245
+		},
+		{
+			"name": "images/Explored_M_and_L_cropped.jpg",
+			"size": 74316
+		},
+		{
+			"name": "images/Explored_M_and_L_cropped_1.jpg",
+			"size": 232970
+		},
+		{
+			"name": "images/Explored_S_cropped.jpg",
+			"size": 23307
+		},
+		{
+			"name": "images/Explored_S_cropped_1.jpg",
+			"size": 70611
+		},
+		{
+			"name": "images/Fiori_design_examples.png",
+			"size": 79367
+		},
+		{
+			"name": "images/Fiori_guidelines_image.png",
+			"size": 68003
+		},
+		{
+			"name": "images/Home_M_and_L_cropped.jpg",
+			"size": 80298
+		},
+		{
+			"name": "images/Home_M_and_L_cropped_1.jpg",
+			"size": 120365
+		},
+		{
+			"name": "images/Home_S_cropped.jpg",
+			"size": 32047
+		},
+		{
+			"name": "images/Home_S_cropped_1.jpg",
+			"size": 60741
+		},
+		{
+			"name": "images/Logo_B_OpenUI5_H.png",
+			"size": 32508
+		},
+		{
+			"name": "images/Logo_B_SAPUI5_H.png",
+			"size": 31599
+		},
+		{
+			"name": "images/Theme_Designer_Image_350x197.jpg",
+			"size": 21202
+		},
+		{
+			"name": "images/Tools_M_and_L_cropped.png",
+			"size": 566232
+		},
+		{
+			"name": "images/Tools_S_cropped.png",
+			"size": 115984
+		},
+		{
+			"name": "images/WebIDE_logo_white_32x61.png",
+			"size": 2950
+		},
+		{
+			"name": "images/build_illu_astronaut_320x235.png",
+			"size": 29732
+		},
+		{
+			"name": "images/build_logo__white_26x80.png",
+			"size": 3049
+		},
+		{
+			"name": "images/demoAppsTeaser.png",
+			"size": 159362
+		},
+		{
+			"name": "images/link-external.png",
+			"size": 230
+		},
+		{
+			"name": "images/link-sap.png",
+			"size": 312
+		},
+		{
+			"name": "images/logo_sap.png",
+			"size": 5665
+		},
+		{
+			"name": "images/logo_stackoverflow.png",
+			"size": 971
+		},
+		{
+			"name": "images/logo_twitter.png",
+			"size": 784
+		},
+		{
+			"name": "images/logo_ui5.png",
+			"size": 2463
+		},
+		{
+			"name": "images/logo_youtube.png",
+			"size": 832
+		},
+		{
+			"name": "images/tools/Build.png",
+			"size": 146830
+		},
+		{
+			"name": "images/tools/CardExplorer.png",
+			"size": 31422
+		},
+		{
+			"name": "images/tools/IconExplorer.png",
+			"size": 126961
+		},
+		{
+			"name": "images/tools/SupportAssistant.png",
+			"size": 132202
+		},
+		{
+			"name": "images/tools/ThemeDesigner.png",
+			"size": 99105
+		},
+		{
+			"name": "images/tools/ThemeParameterToolbox.png",
+			"size": 31515
+		},
+		{
+			"name": "images/tools/UI5EvoTooling.png",
+			"size": 28528
+		},
+		{
+			"name": "images/tools/UI5Inspector.png",
+			"size": 191358
+		},
+		{
+			"name": "images/tools/WebIDE.png",
+			"size": 361782
+		},
+		{
+			"name": "legal_agreement_with_privacy.html",
+			"size": 3079
+		},
+		{
+			"name": "manifest.json",
+			"size": 9398
+		},
+		{
+			"name": "model/LiveEditorData.json",
+			"size": 1652
+		},
+		{
+			"name": "model/formatter-dbg.js",
+			"size": 5117,
+			"isDebug": true
+		},
+		{
+			"name": "model/formatter.js",
+			"size": 1947
+		},
+		{
+			"name": "model/libraryData-dbg.js",
+			"size": 5711,
+			"isDebug": true
+		},
+		{
+			"name": "model/libraryData.js",
+			"size": 1630
+		},
+		{
+			"name": "model/models-dbg.js",
+			"size": 438,
+			"isDebug": true
+		},
+		{
+			"name": "model/models.js",
+			"size": 341
+		},
+		{
+			"name": "model/sourceFileDownloader-dbg.js",
+			"size": 740,
+			"isDebug": true
+		},
+		{
+			"name": "model/sourceFileDownloader.js",
+			"size": 457
+		},
+		{
+			"name": "thirdparty/elasticlunr-dbg.js",
+			"size": 18051,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/elasticlunr.js",
+			"size": 18052
+		},
+		{
+			"name": "thirdparty/esprima-dbg.js",
+			"size": 122129,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/esprima.js",
+			"size": 50939
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-css-dbg.js",
+			"size": 6197,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-css.js",
+			"size": 1686
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-feature-dbg.js",
+			"size": 1679,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-feature.js",
+			"size": 926
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-properties-dbg.js",
+			"size": 1079,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-properties.js",
+			"size": 748
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-text-dbg.js",
+			"size": 308,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/lang-text.js",
+			"size": 254
+		},
+		{
+			"name": "thirdparty/google-code-prettify/prettify-dbg.js",
+			"size": 64981,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/prettify.css",
+			"size": 2185
+		},
+		{
+			"name": "thirdparty/google-code-prettify/prettify.js",
+			"size": 18006
+		},
+		{
+			"name": "thirdparty/google-code-prettify/run-prettify-dbg.js",
+			"size": 553,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/run-prettify.js",
+			"size": 411
+		},
+		{
+			"name": "thirdparty/google-code-prettify/run_prettify-dbg.js",
+			"size": 16682,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/google-code-prettify/run_prettify.js",
+			"size": 16649
+		},
+		{
+			"name": "thirdparty/jsanalyzer/ASTUtils-dbg.js",
+			"size": 5857,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/jsanalyzer/ASTUtils.js",
+			"size": 2559
+		},
+		{
+			"name": "thirdparty/jsanalyzer/Doclet-dbg.js",
+			"size": 2567,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/jsanalyzer/Doclet.js",
+			"size": 1203
+		},
+		{
+			"name": "thirdparty/jsanalyzer/ModuleAnalyzer-dbg.js",
+			"size": 23064,
+			"isDebug": true
+		},
+		{
+			"name": "thirdparty/jsanalyzer/ModuleAnalyzer.js",
+			"size": 10802
+		},
+		{
+			"name": "thirdparty/licenses/elasticlunr-LICENSE.txt",
+			"size": 1095
+		},
+		{
+			"name": "tmpl/LICENSE.txt",
+			"size": 49408
+		},
+		{
+			"name": "tmpl/NOTICE.txt",
+			"size": 59
+		},
+		{
+			"name": "tmpl/index.html.tmpl",
+			"size": 615
+		},
+		{
+			"name": "tmpl/index.js.tmpl",
+			"size": 564
+		},
+		{
+			"name": "tmpl/indexevo.html.tmpl",
+			"size": 786
+		},
+		{
+			"name": "util/DocumentationRouter-dbg.js",
+			"size": 19137,
+			"isDebug": true
+		},
+		{
+			"name": "util/DocumentationRouter.js",
+			"size": 8540
+		},
+		{
+			"name": "util/LiveEditorOutput-dbg.js",
+			"size": 2515,
+			"isDebug": true
+		},
+		{
+			"name": "util/LiveEditorOutput.js",
+			"size": 1031
+		},
+		{
+			"name": "util/ToggleFullScreenHandler-dbg.js",
+			"size": 1429,
+			"isDebug": true
+		},
+		{
+			"name": "util/ToggleFullScreenHandler.js",
+			"size": 919
+		},
+		{
+			"name": "util/liveEditorOutput.html",
+			"size": 477
+		},
+		{
+			"name": "view/AboutDialog.fragment.xml",
+			"size": 5813
+		},
+		{
+			"name": "view/ApiDetail.view.xml",
+			"size": 311
+		},
+		{
+			"name": "view/ApiDetailDeprecated.view.xml",
+			"size": 1580
+		},
+		{
+			"name": "view/ApiDetailExperimental.view.xml",
+			"size": 2555
+		},
+		{
+			"name": "view/ApiDetailInitial.view.xml",
+			"size": 8047
+		},
+		{
+			"name": "view/ApiDetailSince.view.xml",
+			"size": 861
+		},
+		{
+			"name": "view/ApiMaster.view.xml",
+			"size": 1468
+		},
+		{
+			"name": "view/App.view.xml",
+			"size": 7167
+		},
+		{
+			"name": "view/BlockLayoutCell.fragment.xml",
+			"size": 1269
+		},
+		{
+			"name": "view/BlockLayoutTeaserCell.fragment.xml",
+			"size": 1356
+		},
+		{
+			"name": "view/ChangeVersionDialog.fragment.xml",
+			"size": 1020
+		},
+		{
+			"name": "view/Code.view.xml",
+			"size": 1826
+		},
+		{
+			"name": "view/Controls.view.xml",
+			"size": 12073
+		},
+		{
+			"name": "view/ControlsMaster.view.xml",
+			"size": 1602
+		},
+		{
+			"name": "view/DemoApps.view.xml",
+			"size": 4215
+		},
+		{
+			"name": "view/Downloads.view.xml",
+			"size": 162
+		},
+		{
+			"name": "view/Empty.view.xml",
+			"size": 93
+		},
+		{
+			"name": "view/Entity.view.xml",
+			"size": 2715
+		},
+		{
+			"name": "view/FeedbackDialog.fragment.xml",
+			"size": 4153
+		},
+		{
+			"name": "view/Footer.fragment.xml",
+			"size": 1866
+		},
+		{
+			"name": "view/Group.view.xml",
+			"size": 583
+		},
+		{
+			"name": "view/LegalDisclaimerPopover.fragment.xml",
+			"size": 1552
+		},
+		{
+			"name": "view/License.view.xml",
+			"size": 404
+		},
+		{
+			"name": "view/LiveEditor.view.xml",
+			"size": 1949
+		},
+		{
+			"name": "view/NotFound.view.xml",
+			"size": 367
+		},
+		{
+			"name": "view/ReleaseDialog.fragment.xml",
+			"size": 504
+		},
+		{
+			"name": "view/ReleaseNotes.view.xml",
+			"size": 1822
+		},
+		{
+			"name": "view/ReleaseNotesView.view.tmpl",
+			"size": 329
+		},
+		{
+			"name": "view/Sample.view.xml",
+			"size": 2588
+		},
+		{
+			"name": "view/SearchPage.view.xml",
+			"size": 4442
+		},
+		{
+			"name": "view/SubApiDetail.view.xml",
+			"size": 35549
+		},
+		{
+			"name": "view/TermsOfUse.view.xml",
+			"size": 389
+		},
+		{
+			"name": "view/Tools.view.xml",
+			"size": 15544
+		},
+		{
+			"name": "view/TopicDetail.view.xml",
+			"size": 1733
+		},
+		{
+			"name": "view/TopicDetailInitial.view.xml",
+			"size": 7888
+		},
+		{
+			"name": "view/TopicMaster.view.xml",
+			"size": 1268
+		},
+		{
+			"name": "view/VersionInfo.view.xml",
+			"size": 372
+		},
+		{
+			"name": "view/Welcome.view.xml",
+			"size": 22048
+		},
+		{
+			"name": "view/appSettingsDialog.fragment.xml",
+			"size": 1643
+		},
+		{
+			"name": "view/viewSettingsDialog.fragment.xml",
+			"size": 1809
+		}
+	]
+}

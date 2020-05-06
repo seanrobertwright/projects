@@ -1,0 +1,25 @@
+product: '1.0.0'
+
+info:
+  name: shits-api
+  title: "shits-api"
+  version: "1.0.0"
+
+apis:
+  'shits-api_100':
+    $ref: shits-api.yaml
+
+visibility:
+  view:
+    type: public
+  subscribe:
+    type: authenticated
+
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: false
+    rate-limit:
+      value: 100/hour
+      hard-limit: false

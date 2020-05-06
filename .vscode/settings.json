@@ -1,0 +1,8 @@
+{
+    "cSpell.ignoreWords": [
+        "downlevel",
+        "esnext"
+    ],
+    "git.ignoreLimitWarning": true,
+    "jshint.options": {"esversion": 8},
+}

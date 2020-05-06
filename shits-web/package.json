@@ -1,0 +1,22 @@
+{
+  "name": "shits-web",
+  "version": "1.0.0",
+  "description": "Safety and Health Information Tracking System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "safety",
+    "health"
+  ],
+  "author": "Sean Wright",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "open": "^7.0.3",
+    "serve-index": "^1.9.1"
+  }
+}

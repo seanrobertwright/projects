@@ -1,0 +1,144 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Git Guidelines</title><link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="themes/sap-default/img/favicon.ico"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="abstract" content="For using Git for developing content for OpenUI5, rules and guidelines for the use of Git and the content of commit messages have been introduced."><meta name="description" content="For using Git for developing content for OpenUI5, rules and guidelines for the use of Git and the content of commit messages have been introduced."><meta name="content category" content="development"><script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"eeaa5de14e5f4fc1ac796bc0c1ada5fb.html","previousTopicHref":"104135dda5524696ba641001f54c3a95.html"}</script><link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css"><script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script><script type="text/javascript" src="toc-info.js"></script><script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script>
+			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+			    "progress,section,time,video").split(',');
+			  for (var i = 0; i < e.length; i++) {
+			    document.createElement(e[i]);
+			  }
+			</script>
+		<![endif]-->
+        
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+        }
+        func();
+       }
+     }
+     }
+      
+    addLoadEvent(function() { prettyPrint();
+if ($('#local-navigation').length) {
+        $('#local-navigation').navigation();
+    }
+
+
+});
+      
+    </script>
+     <script type="text/javascript" src="js/prettify.js"> </script><script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script><script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head><body class="en-us sap-default centered navigation-default toc-injection enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;"><div id="d4h5-main-container" class="container_12" role="application"><ul id="page-links" class="hidden"><li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li><li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li><li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li></ul><div id="d4h5-section-container" class="grid_12" style="padding-top: 0;"><div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;"><section><div id="content-toolbar" class="toolbar hide-for-small"></div><div class="page topic  - topic-topic " id="loiob2f563900ed2492b9b9003560e00ea9d"><h1 class="title topictitle1" hidden>Git Guidelines</h1><div class="body"><p class="shortdesc" hidden>For using Git for developing content for <span class="ph"><span class="ph pname">OpenUI5</span></span>, rules and guidelines for the use of Git
+and the content of commit messages have been introduced.</p>
+<p class="p">Set the <samp class="ph codeph">core.autocrlf</samp> configuration property in Git to <samp class="ph codeph">false</samp>
+and make sure to use Unix-style linebreaks (LR-only).</p>
+<div class="section"><section class="section" type="Commit Message"><h2 class="section_title" style="font-size: 1.15em;">Commit Message</h2><div class="p">The commit message consists of two or three parts, which are separated by empty lines:<ul class="ul" id="loiob2f563900ed2492b9b9003560e00ea9d__ul_dch_c2p_np">
+<li class="li">
+<p class="p">Commit summary</p>
+</li>
+<li class="li">
+<p class="p">Description</p>
+</li>
+<li class="li">
+<p class="p">Data section</p>
+</li>
+</ul></div><div class="sectiondiv subsection">
+<p class="p subsectiontitle">Commit Summary</p>
+<p class="p">The summary should be 50-70 characters long.</p>
+<p class="p">The summary line must be prefixed with either <samp class="ph codeph">[FIX]</samp> or <samp class="ph codeph">[FEATURE]</samp>, which should be followed by the control
+or component that is the main subject of the change.</p>
+<p class="p">Instead of <samp class="ph codeph">[FIX]</samp> or <samp class="ph codeph">[FEATURE]</samp> and at any other location in the commit message, you can use
+<samp class="ph codeph">[INTERNAL]</samp> for commits or explanations which should not be part of the change log. If you add
+<samp class="ph codeph">[INTERNAL]</samp> as only prefix to the commit message, the entire message won&apos;t be part of the change log. If you add this
+prefix to the middle of the message, everything after this prefix will be ignored for the change log.</p>
+<p class="p">Do not use any <samp class="ph codeph">[</samp> or <samp class="ph codeph">]</samp> within the summary but for the prefixes.</p>
+</div><div class="sectiondiv subsection">
+<p class="p subsectiontitle">Description</p>
+<p class="p">Describe the problem you fix with this change. Whether your patch is a one-line bug fix or 5000 lines of a new feature, there must be an
+underlying problem that motivated you to do this work. Make the necessity of the fix clear to the reviewers, so they will continue
+reading.</p>
+<p class="p">Describe the effect that this change has from a user&apos;s point of view. App crashes and lockups are pretty convincing for example, but not all
+bugs are that obvious and should be mentioned in the text. Even if the problem was spotted during code review, describe the impact you think
+it can have on users.</p>
+<p class="p">After that, describe the technical details of what you changed. It is important to describe the change in a most understandable way so the
+reviewer is able to verify that the code is behaving as you intend it to.</p>
+</div><div class="sectiondiv subsection">
+<p class="p subsectiontitle">Data section</p>
+<div class="p">The data section consists of name-value pairs:<ul class="ul" id="loiob2f563900ed2492b9b9003560e00ea9d__ul_e5g_qhp_np">
+<li class="li">
+<p class="p"><samp class="ph codeph">Fixes: https://github.com/SAP/openui5/issues/(issueNumber)</samp> if the change fixes a GitHub-reported bug</p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">Closes: https://github.com/SAP/openui5/pull/(pullRequestNumber)</samp> if the change comes from a pull request. This is
+usually added by the <span class="ph pname">OpenUI5</span> committer handling the pull request</p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">Change-Id</samp> for Gerrit</p>
+</li>
+</ul></div>
+</div></section></div>
+<section class="example"><h2 class="insertiontitle exampletitle">Example</h2>
+<pre class="pre codeblock prettyprint lang-html">[FIX] sap.m.Popover: scrolling is removed after Popover is rerendered
+
+- this was caused by the special treatment in dealing with rerendering
+in Popover.
+
+- Now the normal invalidation is used and Popup.js takes care of the
+focus/blur event listener in onBefore/AfterRerendering
+
+Change-Id: I3c7d6e4d52fa71e9412b729b7a234a112915c2a4
+Fixes: https://github.com/SAP/openui5/issues/1</pre>
+</section>
+</div></div></section><div class="clear"></div>
+</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="footer-container" class="grid_12"><footer>
+	<div id="custom-footerSpacer"></div>
+	
+</footer>
+</div></body></html>

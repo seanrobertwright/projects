@@ -1,0 +1,544 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>What&apos;s New in OpenUI5 1.38</title><link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="themes/sap-default/img/favicon.ico"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="abstract" content="With this release, OpenUI5 is upgraded from version 1.36 to 1.38."><meta name="description" content="With this release, OpenUI5 is upgraded from version 1.36 to 1.38."><meta name="content category" content="development"><script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"a6a78b7e104348b4bb94fb8bcf003480.html","previousTopicHref":"e659bd2383524a05b716916bcda9b368.html"}</script><link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css"><script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script><script type="text/javascript" src="toc-info.js"></script><script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script>
+			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+			    "progress,section,time,video").split(',');
+			  for (var i = 0; i < e.length; i++) {
+			    document.createElement(e[i]);
+			  }
+			</script>
+		<![endif]-->
+        
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+        }
+        func();
+       }
+     }
+     }
+      
+    addLoadEvent(function() { prettyPrint();
+if ($('#local-navigation').length) {
+        $('#local-navigation').navigation();
+    }
+$('.collapsible').collapsify({"expandText":"Display Content","collapseText":"Hide Content","codeblockText":"Code Sample","codeblockCopyText":"Copy code to clipboard","codeblockSelectText":"Select code for copying to clipboard"});
+
+
+});
+      
+    </script>
+     <script type="text/javascript" src="js/prettify.js"> </script><script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script><script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head><body class="en-us sap-default centered navigation-default toc-injection enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;"><div id="d4h5-main-container" class="container_12" role="application"><ul id="page-links" class="hidden"><li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li><li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li><li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li></ul><div id="d4h5-section-container" class="grid_12" style="padding-top: 0;"><div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;"><section><div id="content-toolbar" class="toolbar hide-for-small"><div class="familylinks"><div class="parentlink"><br><strong>Parent topic: </strong><a class="link" href="../../#/topic/6660a59a8a22460a91fe65a0d96a567e.html" target="_top">Previous Versions</a><br></div></div></div><div class="page concept  - topic-topic concept-concept " id="loio6a875f998994489483e8085705347d72"><h1 class="title topictitle1" hidden>What&apos;s New in <span class="ph"><span class="ph pname">OpenUI5</span></span>
+1.38</h1><div class="body conbody"><p class="shortdesc" hidden>With this release, <span class="ph"><span class="ph pname">OpenUI5</span></span>
+is upgraded from version 1.36 to 1.38.</p>
+<p class="p">In the following sections, we list the main new features and enhancements to <span class="ph"><span class="ph pname">OpenUI5</span></span>. <span class="ph">For a complete,
+detailed list of all new and enhanced functions, see: <a class="xref" href="../../#releasenotes.html" target="_top" alt="#releasenotes.html" title="#releasenotes.html">Change Log</a>.</span></p>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="Documentation Improvements"><h2 class="section_title" style="font-size: 1.15em;">Documentation Improvements</h2>
+
+<p class="p">Thanks a lot to all of you who have used the Demo Kit feedback function! We have
+received lots of comments, many of which regarding our tutorials, and are
+continuously improving the documentation based on your findings.</p>
+<p class="p">Please carry on giving us your feedback: even though we cannot update the
+documentation straight away, your feedback will be considered in the next
+version!</p>
+<div class="p">New or reworked documentation chapters that are not mentioned in the following
+sections:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_hm5_vyp_zv">
+<li class="li">
+<p class="p">Chapter <a class="xref" href="../../#/topic/3d18f20bd2294228acb6910d8e8a5fb5.html" title="OpenUI5 offers hash-based navigation, which allows you to build single-page apps where the navigation is done by changing the hash. In this way the browser does not have to reload the page; instead there is a callback to which the app and especially the affected view can react. A hash string is parsed and matched against patterns which will then inform the handlers." target="_top">Routing and Navigation</a> is now
+updated and reworked.</p>
+</li>
+</ul></div>
+</section></div>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="Deprecation"><h2 class="section_title" style="font-size: 1.15em;">Deprecation</h2>
+
+<div class="p">The following libraries are deprecated as of this version:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_gcw_hkd_qv">
+<li class="li">
+<p class="p"><samp class="ph codeph">sap.ui.commons</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">sap.ui.ux3</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">sap.makit</samp></p>
+</li>
+</ul></div>
+<div class="p">The following themes are also deprecated as of this version:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_k4g_wsl_tv">
+<li class="li">
+<p class="p"><samp class="ph codeph">sap_ux</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">sap_platinum</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">sap_goldreflection</samp></p>
+</li>
+</ul>For more information, see <a class="xref" href="../../#/topic/a87ca843bcee469f82a9072927a7dcdb.html" title="As OpenUI5 evolves over time, some of the UI controls are replaced by others, or their concepts abandoned entirely. This chapter gives an overview on theme and library level of the most important deprecations. Individual control deprecations and more information about the controls replacing them can be found in the API reference within the Demo Kit." target="_top">Deprecated Themes and Libraries</a>.</div>
+</section></div>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="jQuery Upgraded to Version 2.2.3"><h2 class="section_title" style="font-size: 1.15em;">jQuery Upgraded to Version 2.2.3</h2>
+
+<p class="p">jQuery has been upgraded to version 2.2.3. This upgrade may have an impact on apps
+developed with <span class="ph"><span class="ph pname">OpenUI5</span></span>.</p>
+</section></div>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="New Features"><h2 class="section_title" style="font-size: 1.15em;">New Features</h2>
+
+<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_myf_qwy_vv">
+<li class="li">
+<p class="p">We have 46 new icons, and some existing icons have been redesigned - check
+the <span class="ph"><a class="xref" href="../../test-resources/sap/m/demokit/iconExplorer/webapp/index.html" target="_top" alt="https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html" title="https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html">Icon Explorer</a></span> in the
+Demo Kit for details. </p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis">Multiple preprocessors for XML views</span></p>
+<p class="p">We have enhanced the XML view so that it is now capable of running more than
+one preprocessor per hook. Additionally, the new hook
+<samp class="ph codeph">viewxml</samp> has been introduced. For more information, see
+<a class="xref" href="../../#/topic/48b81b967af34ad08f1f88c962b4740a.html" title="Applying preprocessing to views enables you to use features like XML templating. This feature is currently only enabled for XML views. On an abstract level, preprocessing means that a view can be modified during runtime before it is rendered. This makes it possible to use the templating syntax, as it is interpreted by the preprocessor. It also makes it possible to apply user customization." target="_top">Preprocessing XML Views</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><span class="ph"><span class="ph pname">OpenUI5</span></span>
+OData V4 model</span></p>
+<div class="p">We are providing an initial version of the <span class="ph"><span class="ph pname">OpenUI5</span></span> OData V4
+Model. This model supports the following:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_ztz_twy_vv">
+<li class="li">
+<p class="p">Read access</p>
+</li>
+<li class="li">
+<p class="p">Updating properties of OData entities via two-way-binding</p>
+</li>
+<li class="li">
+<p class="p">Operation (function and action) execution</p>
+</li>
+<li class="li">
+<p class="p">Grouping data requests in a batch request</p>
+</li>
+<li class="li">
+<p class="p">Server-side sorting and filtering </p>
+</li>
+</ul><aside class="note restriction" aria-labelledby="note_0_title"><div class="title" id="note_0_title"><strong>Restriction</strong></div>
+<p class="p">This is the first version of the <span class="ph"><span class="ph pname">OpenUI5</span></span>
+OData V4 model. Due to its limited feature scope, we recommend you
+do not use this release to develop applications that are to be used
+in production systems. Please look at the detailed documentation of
+the features, as certain parts of a feature may be missing which you
+might expect as given. While our intention was to be compatible with
+existing controls, existing controls might not work due to small
+incompatibilities compared to
+<samp class="ph codeph">sap.ui.model.odata.(v2.)ODataModel</samp>, or due to
+missing features in the model. Up to now, only limited tests with
+controls have been done with the <span class="ph"><span class="ph pname">OpenUI5</span></span>
+OData V4 model. The interface for applications has been changed to
+make usage of the model easier and more efficient. A summary of
+these changes is documented in the section <a class="xref" href="../../#/topic/abd4d7c7548d4c29ab8364d3904a6d74.html" title="This section outlines the main differences between the OData V2 and OData V4 models." target="_top">Changes Compared to OData V2 Model</a>.</p></aside></div>
+<p class="p">For more
+information see <a class="xref" href="../../#/topic/5de13cf4dd1f4a3480f7e2eaaee3f5b8.html" title="The sap.ui.model.odata.v4.ODataModel is the model implementation for consuming an OData V4 service." target="_top">OData V4 Model</a>, the
+<a class="xref" href="../../#/api/sap.ui.model.odata.v4" target="_top" alt="#/api/sap.ui.model.odata.v4" title="#/api/sap.ui.model.odata.v4">API Reference</a>, and the <a class="xref" href="../../#/entity/sap.ui.model.odata.v4.ODataModel" target="_top" alt="#/entity/sap.ui.model.odata.v4.ODataModel" title="#/entity/sap.ui.model.odata.v4.ODataModel">sample</a>. </p>
+</li>
+</ul>
+</section></div>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="New Controls"><h2 class="section_title" style="font-size: 1.15em;">New Controls</h2>
+
+<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_g4t_xz3_xv">
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.FormattedText</samp></span>: You can use this
+control to display formatted texts in HTML format.</p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.FormattedText" target="_top" alt="#/api/sap.m.FormattedText" title="#/api/sap.m.FormattedText">API Reference</a> and the <a class="xref" href="../../#/entity/sap.m.FormattedText" target="_top" alt="#/entity/sap.m.FormattedText" title="#/entity/sap.m.FormattedText">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.MenuButton</samp></span>: The control opens a
+hierarchical menu and enables quick triggering of the last action of the
+menu item selected. In <samp class="ph codeph">Regular</samp> mode it always opens the
+menu, whereas in <samp class="ph codeph">Split</samp> mode it can be also used directly as
+a button to trigger the currently displayed menu item&#x2019;s action. In
+<samp class="ph codeph">Split</samp> mode it can display either the default menu item
+or the last selected one.</p>
+<div class="table-wrapper tablenoborder"><table summary id="loio6a875f998994489483e8085705347d72__table_vhv_sv3_yv" class="table" frame="border" border="1" rules="all"><colgroup><col width="50%"><col width="50%"></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry" style="vertical-align:top;" id="d44013e342">
+<p class="p">Regular Mode</p>
+</th>
+<th class="entry" style="vertical-align:top;" id="d44013e348">
+<p class="p">Split Mode</p>
+</th>
+</tr>
+</thead><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d44013e342 ">
+<p class="p"><img class="inline" id="loio6a875f998994489483e8085705347d72__image_fst_fw3_yv" src="loio69b18052e57e48538fa02229ff7e43f7_HiRes.png"></p>
+</td>
+<td class="entry" style="vertical-align:top;" headers="d44013e348 ">
+<p class="p"><img class="inline" id="loio6a875f998994489483e8085705347d72__image_r2s_gw3_yv" src="loio3fb088782e4e49bab3f05920066794c1_HiRes.png"></p>
+</td>
+</tr>
+</tbody></table></div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.MenuButton" target="_top" alt="#/api/sap.m.MenuButton" title="#/api/sap.m.MenuButton">API Reference</a> and the <a class="xref" href="../../#/sample/sap.m.sample.MenuButton/preview" target="_top" alt="#/sample/sap.m.sample.MenuButton/preview" title="#/sample/sap.m.sample.MenuButton/preview">sample</a>.</p>
+</li>
+<li class="li">
+<div class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.ObjectMarker</samp></span>: The
+<samp class="ph codeph">ObjectMarker</samp> control represents the status of an object
+with icon and/or text. It can be interactive (as a link) or non-interactive.
+It has the following predefined types:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_qzp_4w3_yv">
+<li class="li">
+<p class="p"><samp class="ph codeph">Flagged</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">Favorite</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">Draft</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">Locked</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">Unsaved</samp></p>
+</li>
+</ul>
+</div>
+<p class="p">An object might have multiple <samp class="ph codeph">ObjectMarker</samp>s at the same time
+but the editing states (<samp class="ph codeph">Locked</samp>, <samp class="ph codeph">Draft</samp>, and
+<samp class="ph codeph">Unsaved</samp>) are mutually exclusive.</p>
+<div class="fig fignone" id="loio6a875f998994489483e8085705347d72__fig_atf_xw3_yv"><div class="figbody">
+<img class="inline" id="loio6a875f998994489483e8085705347d72__image_ewm_bx3_yv" src="loio63be65114f584a01bda20eb866894ace_HiRes.png">
+</div></div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.ObjectMarker" target="_top" alt="#/api/sap.m.ObjectMarker" title="#/api/sap.m.ObjectMarker">API Reference</a> and the <a class="xref" href="../../#/entity/sap.m.ObjectMarker" target="_top" alt="#/entity/sap.m.ObjectMarker" title="#/entity/sap.m.ObjectMarker">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.RangeSlider</samp></span> is a new input
+control that is used to select a range of values. The
+<samp class="ph codeph">RangeSlider</samp> has two slider handles that can be moved
+along a predefined numerical range scale. This control extends the
+<samp class="ph codeph">sap.m.Slider</samp> and introduces additional
+functionality.</p>
+<div class="fig fignone" id="loio6a875f998994489483e8085705347d72__fig_rmq_n1f_yv"><div class="figbody">
+<img class="inline" id="loio6a875f998994489483e8085705347d72__image_yy1_41f_yv" src="loiod6a92b6c14db4bbab8d0a845489155e6_HiRes.png">
+</div></div>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">sap.m.StepInput</samp>: The <samp class="ph codeph">StepInput</samp> control
+allows the user to change the input value with a predefined step. The value
+can be changed using the increment/decrement buttons or keys on the
+keyboard. On the desktop, when using the keyboard <kbd class="key">PgUp</kbd> and
+<kbd class="key">PgDn</kbd> keys, the value increases/decreases two steps at a
+time.</p>
+<div class="fig fignone" id="loio6a875f998994489483e8085705347d72__fig_nx4_nx3_yv"><div class="figbody">
+<img class="inline" id="loio6a875f998994489483e8085705347d72__image_xxq_sx3_yv" src="loio40eb4db5863944c88839db0ff3d7e6cb_HiRes.png">
+</div></div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.StepInput" target="_top" alt="#/api/sap.m.StepInput" title="#/api/sap.m.StepInput">API Reference</a> and the <a class="xref" href="../../#/entity/sap.m.StepInput" target="_top" alt="#/entity/sap.m.StepInput" title="#/entity/sap.m.StepInput">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.layout.ResponsiveSplitter</samp></span> is a
+layout control that is used to visually divide the content of its parent.
+The control is responsive and can adjust its contents to any screen size. On
+smaller screens, pagination is used to allow navigation to all splitter
+panes.</p>
+<div class="fig fignone" id="loio6a875f998994489483e8085705347d72__fig_dsw_jz2_yv"><div class="figbody">
+<img class="inline" id="loio6a875f998994489483e8085705347d72__image_hns_nz2_yv" src="loio542861b7dc7c452a994fe98beadf6d10_HiRes.png">
+</div></div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.ui.layout.ResponsiveSplitter" target="_top" alt="#/api/sap.ui.layout.ResponsiveSplitter" title="#/api/sap.ui.layout.ResponsiveSplitter">API Reference</a> and the <a class="xref" href="../../#/entity/sap.ui.layout.ResponsiveSplitter" target="_top" alt="#/entity/sap.ui.layout.ResponsiveSplitter" title="#/entity/sap.ui.layout.ResponsiveSplitter">sample</a></p>
+</li>
+</ul>
+</section></div>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="Improved Features"><h2 class="section_title" style="font-size: 1.15em;">Improved Features</h2>
+
+<ul class="ul">
+<li class="li">
+<p class="p">
+<span class="ph emphasis emphasis">One page acceptance test (OPA)</span>: </p>
+<p class="p">The <samp class="ph codeph">Press</samp> and <samp class="ph codeph">EnterText</samp> actions now support
+a larger number of controls and can now be executed on embedded controls by
+specifying the control suffix. <span class="ph">For
+more information, see the API Reference for <a class="xref" href="../../#/api/sap.ui.test.actions.Press" target="_top" alt="#/api/sap.ui.test.actions.Press" title="#/api/sap.ui.test.actions.Press"><samp class="ph codeph">Press</samp></a> and
+<a class="xref" href="../../#/api/sap.ui.test.actions.EnterText" target="_top" alt="#/api/sap.ui.test.actions.EnterText" title="#/api/sap.ui.test.actions.EnterText"><samp class="ph codeph">EnterText</samp></a>
+and the <a class="xref" href="../../#/sample/sap.ui.core.sample.OpaAction/preview" target="_top" alt="#/sample/sap.ui.core.sample.OpaAction/preview" title="#/sample/sap.ui.core.sample.OpaAction/preview">sample</a>.</span></p>
+</li>
+</ul>
+</section></div>
+<div class="section collapsible expanded"><section class="section collapsible expanded" type="Improved Controls"><h2 class="section_title" style="font-size: 1.15em;">Improved Controls</h2>
+
+<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_ggm_gcj_xv">
+<li class="li">
+<div class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.ComboBox</samp></span>:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_uml_4mh_yv">
+<li class="li">
+<p class="p">Is now supported on mobile phones. The list of available values
+will open as a full-screen dialog on small devices.</p>
+</li>
+<li class="li">
+<p class="p">The new <samp class="ph codeph">loadItem</samp> event makes it possible to
+defer initialization of items in the <samp class="ph codeph">ComboBox</samp>
+dropdown list control to a point in time when the items are
+required. This helps to improve performance. </p>
+<p class="p">For more information, see the <a class="xref" href="../../#/entity/sap.m.ComboBox" target="_top" alt="#/entity/sap.m.ComboBox" title="#/entity/sap.m.ComboBox">sample</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.DatePicker</samp></span>,
+<span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.DateTimePicker</samp></span>,
+<span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.PlanningCalendar</samp></span>, and
+<span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.unified.Calendar</samp></span>: You
+can now set minimum and maximum dates to limit the range of available
+dates.</p>
+<p class="p">For more
+information, see the API Reference for <a class="xref" href="../../#/api/sap.m.DatePicker" target="_top" alt="#/api/sap.m.DatePicker" title="#/api/sap.m.DatePicker"><samp class="ph codeph">sap.m.DatePicker</samp></a>, <a class="xref" href="../../#/api/sap.m.DateTimePicker" target="_top" alt="#/api/sap.m.DateTimePicker" title="#/api/sap.m.DateTimePicker"><samp class="ph codeph">sap.m.DateTimePicker</samp></a>, <a class="xref" href="../../#/api/sap.m.PlanningCalendar" target="_top" alt="#/api/sap.m.PlanningCalendar" title="#/api/sap.m.PlanningCalendar"><samp class="ph codeph">sap.m.PlanningCalendar</samp></a>, and <a class="xref" href="../../#/api/sap.ui.unified.Calendar" target="_top" alt="#/api/sap.ui.unified.Calendar" title="#/api/sap.ui.unified.Calendar"><samp class="ph codeph">sap.ui.unified.Calendar</samp></a>, and the samples for
+<a class="xref" href="../../#/sample/sap.m.sample.DatePicker/preview" target="_top" alt="#/sample/sap.m.sample.DatePicker/preview" title="#/sample/sap.m.sample.DatePicker/preview"><samp class="ph codeph">sap.m.DatePicker</samp></a>, <a class="xref" href="../../#/sample/sap.m.sample.PlanningCalendarMinMax/preview" target="_top" alt="#/sample/sap.m.sample.PlanningCalendarMinMax/preview" title="#/sample/sap.m.sample.PlanningCalendarMinMax/preview"><samp class="ph codeph">sap.m.PlanningCalendar</samp></a>, and <a class="xref" href="../../#/sample/sap.ui.unified.sample.CalendarMinMax/preview" target="_top" alt="#/sample/sap.ui.unified.sample.CalendarMinMax/preview" title="#/sample/sap.ui.unified.sample.CalendarMinMax/preview"><samp class="ph codeph">sap.ui.unified.Calendar</samp></a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.GenericTile</samp></span>: The
+<samp class="ph codeph">GenericTile</samp> control has a new responsive design that
+significantly improves the user experience, it has also been optimized for
+larger smartphones. The <samp class="ph codeph">GenericTile</samp> adjusts its size to fit
+all the different display sizes of the current devices supported by <span class="ph"><span class="ph pname">OpenUI5</span></span> (see
+<a class="xref" href="../../#/topic/74b59efa0eef48988d3b716bd0ecc933.html" title="Browser and platform support for the OpenUI5 libraries on iOS, Android, macOS, and Windows platforms." target="_top">Browser and Platform Support</a>). The main changes
+are the tile size, font size, padding, the new <samp class="ph codeph">ImageContent</samp>
+control, and new samples showing the variety of use cases for the
+<samp class="ph codeph">GenericTile</samp>.</p>
+<p class="p">The <samp class="ph codeph">sap.m.ImageContent</samp> control can be used to include images
+in a tile. It can be embedded in the content area of the
+<samp class="ph codeph">GenericTile</samp> control.</p>
+<p class="p">For more
+information, see the API Reference for <a class="xref" href="../../#/api/sap.m.GenericTile" target="_top" alt="#/api/sap.m.GenericTile" title="#/api/sap.m.GenericTile"><samp class="ph codeph">sap.m.GenericTile</samp></a> and <a class="xref" href="../../#/api/sap.m.ImageContent" target="_top" alt="#/api/sap.m.ImageContent" title="#/api/sap.m.ImageContent"><samp class="ph codeph">sap.m.ImageContent</samp></a>, the samples for <a class="xref" href="../../#/entity/sap.m.GenericTile" target="_top" alt="#/entity/sap.m.GenericTile" title="#/entity/sap.m.GenericTile"><samp class="ph codeph">GenericTile</samp></a> and
+<a class="xref" href="../../#/entity/sap.m.ImageContent" target="_top" alt="#/entity/sap.m.ImageContent" title="#/entity/sap.m.ImageContent"><samp class="ph codeph">ImageContent</samp></a>,
+and <a class="xref" href="../../#/topic/a1998ecc0853481891f8bc81cf900c9a.html" title="The GenericTile control is the basic concept that displays any kind of content within a tile comprising for example news, feeds, images, micro charts, or numeric content." target="_top">Generic Tile</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.List</samp></span> and
+<span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.Table</samp></span>: The new
+<samp class="ph codeph">keyboardMode</samp> property for the <samp class="ph codeph">List</samp> and
+<samp class="ph codeph">Table</samp> controls determines the keyboard handling for
+these controls. The <samp class="ph codeph">Navigation</samp> value of the property
+enables a mode that allows you to navigate within a large number of items,
+for example, table cells, using the tab key, whereas the
+<samp class="ph codeph">Edit</samp> mode can be used to edit a limited number of
+items.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.MaskInput</samp></span>: You can now use escape
+characters in the <samp class="ph codeph">MaskInput</samp> definition to be able to use
+the predefined rule characters as immutable ones.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.MessagePopover</samp></span> has been improved
+and can now be resized. Resizing is only possible when the
+<samp class="ph codeph">MessagePopover</samp> is opened from the footer on a
+desktop.</p>
+<div class="fig fignone" id="loio6a875f998994489483e8085705347d72__fig_dd2_gbf_yv"><div class="figbody">
+<img class="inline" id="loio6a875f998994489483e8085705347d72__image_wfm_jbf_yv" src="loio8443028265c54ddaa40cd223bf401d2f_HiRes.png">
+</div></div>
+</li>
+<li class="li">
+<div class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.NotificationListItem</samp></span>: The control
+has two improvements:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_iky_rhn_yv">
+<li class="li">
+<p class="p">The control responsiveness is updated for better usability on
+large screens (more than 640 pixels width) &#x2013; the buttons are now
+located on the right side of the text.</p>
+</li>
+<li class="li">
+<p class="p">The <span class="ph uicontrol">Show More</span> button for toggling
+expand/collapse mode can now be hidden with the use of the new
+property <samp class="ph codeph">hideShowMoreButton</samp>.</p>
+</li>
+</ul></div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.NotificationListItem" target="_top" alt="#/api/sap.m.NotificationListItem" title="#/api/sap.m.NotificationListItem">API Reference</a> and the <a class="xref" href="../../#/entity/sap.m.NotificationListItem" target="_top" alt="#/entity/sap.m.NotificationListItem" title="#/entity/sap.m.NotificationListItem">sample</a>.</p>
+</li>
+<li class="li">
+<div class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.Popover</samp></span> has four new values for
+its <samp class="ph codeph">PlacementType</samp>:<ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_bjy_s1f_yv">
+<li class="li">
+<p class="p"><samp class="ph codeph">PreferredBottomOrFlip</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">PreferredLeftOrFlip</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">PreferredRightOrFlip</samp></p>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">PreferredTopOrFlip</samp></p>
+</li>
+</ul>They determine the preferred position of the <samp class="ph codeph">Popover</samp>
+and how it behaves when there is insufficient space for it on the screen.
+These properties allow the <samp class="ph codeph">Popover</samp> to flip over and cover
+some of the content below it.</div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.PlacementType" target="_top" alt="#/api/sap.m.PlacementType" title="#/api/sap.m.PlacementType">API Reference</a> and the <a class="xref" href="../../#/entity/sap.m.PlacementType" target="_top" alt="#/entity/sap.m.PlacementType" title="#/entity/sap.m.PlacementType">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.TextArea</samp></span> can now grow and shrink
+to adapt to the entered text.</p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.TextArea" target="_top" alt="#/api/sap.m.TextArea" title="#/api/sap.m.TextArea">API Reference</a> and the <a class="xref" href="../../#/sample/sap.m.sample.TextAreaGrowing/preview" target="_top" alt="#/sample/sap.m.sample.TextAreaGrowing/preview" title="#/sample/sap.m.sample.TextAreaGrowing/preview">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.UploadCollection</samp></span>: To upload a new
+version of a file to the <samp class="ph codeph">UploadCollection</samp> list, the
+<samp class="ph codeph">openFileDialog</samp> method is available. You can provide a
+pushbutton in the header area and if one entry in the
+<samp class="ph codeph">UploadCollection</samp> list is selected, the API method will
+be called.</p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.UploadCollection" target="_top" alt="#/api/sap.m.UploadCollection" title="#/api/sap.m.UploadCollection">API Reference</a> and the <a class="xref" href="../../#/entity/sap.m.UploadCollection" target="_top" alt="#/entity/sap.m.UploadCollection" title="#/entity/sap.m.UploadCollection">sample</a>t.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.m.ViewSettingsDialog</samp></span>: The
+<samp class="ph codeph">ViewSettingsDialog</samp> control now gives you the
+opportunity to modify filter detail page items on the fly with the help of
+the new event <samp class="ph codeph">filterDetailPageOpened</samp>. This event is fired
+each time after the filter detail page is accessed, notifying the outside
+world that the page is loaded along with the information for which filter
+the respective details are displayed. This allows a handler to be attached
+that alters the filter detail items aggregation.</p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/api/sap.m.ViewSettingsDialog" target="_top" alt="#/api/sap.m.ViewSettingsDialog" title="#/api/sap.m.ViewSettingsDialog">API Reference</a> in the Demo
+Kit.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.tnt.SideNavigation</samp></span>: Root items with
+no children can now be opened with a single click when the
+<samp class="ph codeph">SideNavigation</samp> control is in collapsed mode. </p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.tnt.ToolPage</samp></span>: Animation is now
+added when expanding and collapsing the <samp class="ph codeph">SideNavigation</samp>
+control within the <samp class="ph codeph">ToolPage</samp>.</p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/sample/sap.tnt.sample.ToolPage/preview" target="_top" alt="#/sample/sap.tnt.sample.ToolPage/preview" title="#/sample/sap.tnt.sample.ToolPage/preview">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.commons.ColorPicker</samp></span> supports HSL
+(Hue Saturation and Lightness) mode. This mode works better with modern
+browsers and it does not require intermediate conversion back to RGB.
+Additionally, there is a new input field for the <samp class="ph codeph">alpha</samp>
+(transparency) value for more precise color definition. </p>
+<div class="fig fignone" id="id-26629-loio6a875f998994489483e8085705347d72--fig-391-192-13"><div class="figbody">
+<img class="inline" src="loioafef27d2b0ef41b1b8dfa7517047bda8_HiRes.png">
+</div></div>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.layout.Form</samp></span> and
+<span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.layout.SimpleForm</samp></span>: You
+can now add a toolbar to a form container or the form itself. </p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/sample/sap.ui.layout.sample.FormToolbar/preview" target="_top" alt="#/sample/sap.ui.layout.sample.FormToolbar/preview" title="#/sample/sap.ui.layout.sample.FormToolbar/preview">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.table.DataTable</samp></span> has been
+deleted.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.table.TreeTable</samp></span> now supports
+<samp class="ph codeph">AutoExpand</samp> paging if it is bound to an OData model.</p>
+<p class="p">By setting <samp class="ph codeph">numberOfExpandedLevels</samp> as a binding parameter
+(e.g. in the <samp class="ph codeph">bindRows</samp> call of the
+<samp class="ph codeph">TreeTable</samp>), you now can specify the initial expansion
+depth. This feature is only available for OData services exposing a property
+marked with the annotation
+<samp class="ph codeph">hierarchy-node-descendant-count-for</samp>. This also means
+the service has to respect a <samp class="ph codeph">$filter</samp> statement on the
+annotated <samp class="ph codeph">Level</samp> property, and returns the entries sorted.
+You can find the specification for this and all other hierarchy annotations
+in the SAP Community Network under <a class="xref" href="http://scn.sap.com/docs/DOC-44986" target="_blank" alt="http://scn.sap.com/docs/DOC-44986" title="http://scn.sap.com/docs/DOC-44986">SAP Annotations for OData Version 2.0</a></p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.ui.unified.Menu</samp></span>: To significantly
+increase the usability of <samp class="ph codeph">sap.ui.unified.Menu</samp>, a delay has
+been added to the closing of submenus.</p>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/sample/sap.ui.unified.sample.MenuItemEventing/preview" target="_top" alt="#/sample/sap.ui.unified.sample.MenuItemEventing/preview" title="#/sample/sap.ui.unified.sample.MenuItemEventing/preview">sample</a>t.</p>
+</li>
+<li class="li">
+<p class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.uxap.ObjectPageHeader</samp></span>
+ObjectPageHeader can be integrated with the <samp class="ph codeph">SideContent</samp>
+scenario. A new <samp class="ph codeph">sideContentButton</samp> aggregation has been
+added. This aggregation has a new button, which appears after the actions
+buttons and triggers opening the side content for additional
+information.</p>
+<div class="fig fignone" id="id-31240-loio6a875f998994489483e8085705347d72--fig-431-152-13"><div class="figbody">
+<img class="inline" src="loio8e2908435c774fe58ab9b8107be5f4fb_HiRes.png">
+</div></div>
+<p class="p">For more
+information, see the <a class="xref" href="../../#/sample/sap.uxap.sample.ObjectPageDynamicSideContentBtn/preview" target="_top" alt="#/sample/sap.uxap.sample.ObjectPageDynamicSideContentBtn/preview" title="#/sample/sap.uxap.sample.ObjectPageDynamicSideContentBtn/preview">sample</a>.</p>
+</li>
+<li class="li">
+<div class="p"><span class="ph emphasis emphasis"><samp class="ph codeph">sap.uxap.ObjectPageLayout</samp></span>: <ul class="ul" id="loio6a875f998994489483e8085705347d72__ul_qtl_jtn_yv">
+<li class="li">
+<p class="p">It supports scrolling to a particular section, based on its ID.
+This allows easier access to all parts of the application and
+consistent navigation back to a previous position within the
+<samp class="ph codeph">ObjectPage</samp>.</p>
+<p class="p">For more information, see the <a class="xref" href="../../#/sample/sap.uxap.sample.ObjectPageLazyLoadingWithoutBlocks/preview" target="_top" alt="#/sample/sap.uxap.sample.ObjectPageLazyLoadingWithoutBlocks/preview" title="#/sample/sap.uxap.sample.ObjectPageLazyLoadingWithoutBlocks/preview">sample</a>.</p>
+</li>
+<li class="li">
+<p class="p">Performance is improved for the use case with no
+<samp class="ph codeph">Blocks</samp>. The <samp class="ph codeph">ObjectPage</samp> now
+supports lazy loading with the stashed property of the
+<samp class="ph codeph">ObjectPageLazyLoader</samp>. As a result, you
+avoid the additional creation of XML views for each
+<samp class="ph codeph">Block</samp>.</p>
+<p class="p">For more information, see the <a class="xref" href="../../#/sample/sap.uxap.sample.ObjectPageState/preview" target="_top" alt="#/sample/sap.uxap.sample.ObjectPageState/preview" title="#/sample/sap.uxap.sample.ObjectPageState/preview">sample</a> and <a class="xref" href="../../#/topic/bc410e94e46540efa02857e15aae583f.html" title="The object page offers different ways to handle specific scrolling scenarios." target="_top">Object Page Scrolling</a>.</p>
+</li>
+</ul></div>
+</li>
+</ul>
+</section></div>
+</div><div class="related-links"> <div class="familylinks"><div class="parentlink"><br><strong>Parent topic: </strong><a class="link" href="../../#/topic/6660a59a8a22460a91fe65a0d96a567e.html" target="_top">Previous Versions</a><br></div></div><div class="relinfo"><div class="relinfotitle ">Related Information</div><div><a class="link" href="../../#/topic/21fc6cb77b0c44aab55f045812e69c98.html" title="With this release OpenUI5 is upgraded from version 1.73 to 1.74." target="_top">What&apos;s New in OpenUI5 1.74</a></div><div><a class="link" href="../../#/topic/7b826642c45d4b8d97c5013cdc240ad6.html" title="With this release OpenUI5 is upgraded from version 1.72 to 1.73." target="_top">What&apos;s New in OpenUI5 1.73</a></div><div><a class="link" href="../../#/topic/25e532617b7f4b9bad842757324151ed.html" title="With this release OpenUI5 is upgraded from version 1.71 to 1.72." target="_top">What&apos;s New in OpenUI5 1.72</a></div><div><a class="link" href="../../#/topic/609fd015eaf64bd2a4a5c0331590eb4c.html" title="With this release OpenUI5 is upgraded from version 1.70 to 1.71." target="_top">What&apos;s New in OpenUI5 1.71</a></div><div><a class="link" href="../../#/topic/4e89fee547a24385826cddcfdf4df238.html" title="With this release OpenUI5 is upgraded from version 1.69 to 1.70." target="_top">What&apos;s New in OpenUI5 1.70</a></div><div><a class="link" href="../../#/topic/41203fd3272b479d8c665357e3b21a43.html" title="With this release OpenUI5 is upgraded from version 1.68 to 1.69." target="_top">What&apos;s New in OpenUI5 1.69</a></div><div><a class="link" href="../../#/topic/5531aef1adc8462392a5b8fe1178606e.html" title="With this release OpenUI5 is upgraded from version 1.67 to 1.68." target="_top">What&apos;s New in OpenUI5 1.68</a></div><div><a class="link" href="../../#/topic/0968958c4143469d941dbe3b59e06142.html" title="With this release OpenUI5 is upgraded from version 1.66 to 1.67." target="_top">What&apos;s New in OpenUI5 1.67</a></div><div><a class="link" href="../../#/topic/ebe7fda555aa466782090053d6f54f21.html" title="With this release OpenUI5 is upgraded from version 1.65 to 1.66." target="_top">What&apos;s New in OpenUI5 1.66</a></div><div><a class="link" href="../../#/topic/9d2b1897722a4e99b60580fb09aa35e0.html" title="With this release OpenUI5 is upgraded from version 1.64 to 1.65." target="_top">What&apos;s New in OpenUI5 1.65</a></div><div><a class="link" href="../../#/topic/1975e304ab924fb3b799240fdd9fe59b.html" title="With this release OpenUI5 is upgraded from version 1.63 to 1.64." target="_top">What&apos;s New in OpenUI5 1.64</a></div><div><a class="link" href="../../#/topic/77e1dcc27c494d60ba0a03759b706e89.html" title="With this release OpenUI5 is upgraded from version 1.62 to 1.63." target="_top">What&apos;s New in OpenUI5 1.63</a></div><div><a class="link" href="../../#/topic/27eea38eeb7b40d19d0dfe3ddf513175.html" title="With this release OpenUI5 is upgraded from version 1.61 to 1.62." target="_top">What&apos;s New in OpenUI5 1.62</a></div><div><a class="link" href="../../#/topic/de4d50b6c0f649fa859e4657ff8557a6.html" title="With this release OpenUI5 is upgraded from version 1.60 to 1.61." target="_top">What&apos;s New in OpenUI5 1.61</a></div><div><a class="link" href="../../#/topic/2a70354a2a38492a873333edc4b9a303.html" title="With this release OpenUI5 is upgraded from version 1.58 to 1.60." target="_top">What&apos;s New in OpenUI5 1.60</a></div><div><a class="link" href="../../#/topic/b28edde1f4ad425d9247f3bbcdc5d9b7.html" title="With this release, OpenUI5 is upgraded from version 1.56 to 1.58." target="_top">What&apos;s New in OpenUI5 1.58</a></div><div><a class="link" href="../../#/topic/53b4b5ec2c83408a8da2cb6b9154c246.html" title="With this release, OpenUI5 is upgraded from version 1.54 to 1.56." target="_top">What&apos;s New in OpenUI5 1.56</a></div><div><a class="link" href="../../#/topic/f29023ebf9dc4a43b98516a5e2c43837.html" title="With this release, OpenUI5 is upgraded from version 1.52 to 1.54." target="_top">What&apos;s New in OpenUI5 1.54</a></div><div><a class="link" href="../../#/topic/a09dd79a24c041d288402768558a1d1a.html" title="With this release, OpenUI5 is upgraded from version 1.50 to 1.52." target="_top">What&apos;s New in OpenUI5 1.52</a></div><div><a class="link" href="../../#/topic/a8449849c81249bb8abd98b4b9342a4a.html" title="With this release, OpenUI5 is upgraded from version 1.48 to 1.50." target="_top">What&apos;s New in OpenUI5 1.50</a></div><div><a class="link" href="../../#/topic/2818f800e7424c5c91dbd495f8cb757b.html" title="With this release, OpenUI5 is upgraded from version 1.46 to 1.48." target="_top">What&apos;s New in OpenUI5 1.48</a></div><div><a class="link" href="../../#/topic/4cf0986450ca43e5a8d12dd66e999a77.html" title="With this release, OpenUI5 is upgraded from version 1.44 to 1.46." target="_top">What&apos;s New in OpenUI5 1.46</a></div><div><a class="link" href="../../#/topic/05ce1dc72c74475bada39234f6721f21.html" title="With this release, OpenUI5 is upgraded from version 1.42 to 1.44." target="_top">What&apos;s New in OpenUI5 1.44</a></div><div><a class="link" href="../../#/topic/4768f1ac7f0645929b4e9ea9981bb65e.html" title="With this release, OpenUI5 is upgraded from version 1.40 to 1.42." target="_top">What&apos;s New in OpenUI5 1.42</a></div><div><a class="link" href="../../#/topic/e659bd2383524a05b716916bcda9b368.html" title="With this release, OpenUI5 is upgraded from version 1.38 to 1.40." target="_top">What&apos;s New in OpenUI5 1.40</a></div></div></div></div></section><div class="clear"></div>
+</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="footer-container" class="grid_12"><footer>
+	<div id="custom-footerSpacer"></div>
+	
+</footer>
+</div></body></html>

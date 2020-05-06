@@ -1,0 +1,399 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Annotations in Translation Files</title><link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="themes/sap-default/img/favicon.ico"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="abstract" content="All strings for translation have to be annotated to provide more context for translation. An annotation consists of an &quot;X/Y&quot; text type classification, an optional length restriction, and a freetext explanation how the string is used on the UI."><meta name="description" content="All strings for translation have to be annotated to provide more context for translation. An annotation consists of an &quot;X/Y&quot; text type classification, an optional length restriction, and a freetext explanation how the string is used on the UI."><meta name="content category" content="development"><script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"104135dda5524696ba641001f54c3a95.html","previousTopicHref":"bafc6867041644a9b596370e48a106ee.html"}</script><link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css"><script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script><script type="text/javascript" src="toc-info.js"></script><script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+		<!--[if lt IE 9]>
+			<script>
+			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+			    "progress,section,time,video").split(',');
+			  for (var i = 0; i < e.length; i++) {
+			    document.createElement(e[i]);
+			  }
+			</script>
+		<![endif]-->
+        
+    <script>
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+        }
+        func();
+       }
+     }
+     }
+      
+    addLoadEvent(function() { prettyPrint();
+if ($('#local-navigation').length) {
+        $('#local-navigation').navigation();
+    }
+
+
+});
+      
+    </script>
+     <script type="text/javascript" src="js/prettify.js"> </script><script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script><script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head><body class="en-us sap-default centered navigation-default toc-injection enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;"><div id="d4h5-main-container" class="container_12" role="application"><ul id="page-links" class="hidden"><li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li><li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li><li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li></ul><div id="d4h5-section-container" class="grid_12" style="padding-top: 0;"><div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;"><section><div id="content-toolbar" class="toolbar hide-for-small"></div><div class="page topic  - topic-topic " id="loio831039835e7c4da3a8a0b49567573afe"><h1 class="title topictitle1" hidden>Annotations in Translation Files</h1><div class="body"><p class="shortdesc" hidden>All strings for translation have to be annotated to provide more context for
+translation. An annotation consists of an &quot;X/Y&quot; text type classification, an optional length
+restriction, and a freetext explanation how the string is used on the UI.</p>
+<p class="p">The following comment types exist:</p>
+<pre class="pre codeblock prettyprint lang-prefs">
+#&lt;SAP-Text-Type&gt;
+#&lt;SAP-Text-Type&gt;:&lt;Note for translator&gt;
+#&lt;SAP-Text-Type&gt;,&lt;Length-Restriction&gt;
+#&lt;SAP-Text-Type&gt;,&lt;Length-Restriction&gt;:&lt;Note for translator&gt;</pre>
+<div class="section"><section class="section" type="Text Classification"><h2 class="section_title" style="font-size: 1.15em;">Text Classification</h2>
+
+<p class="p">The following text type classifications exist:</p>
+<ul class="ul" id="loio831039835e7c4da3a8a0b49567573afe__ul_n41_nmp_np">
+<li class="li">
+<p class="p">X texts are used for all texts with less than 120 characters (short
+texts)</p>
+</li>
+<li class="li">
+<p class="p">Y texts are used for texts with more than 120 characters</p>
+<aside class="note" aria-labelledby="note_0_title"><div class="title" id="note_0_title"><strong>Note</strong></div>
+<p>Use only the Y text types specified in the table below. More Y text types
+exist but must not be used.</p></aside>
+</li>
+<li class="li">
+<p class="p"><samp class="ph codeph">NOTR</samp> is used for strings that are not relevant for
+translation</p>
+</li>
+</ul>
+<div class="table-wrapper tablenoborder"><table summary id="loio831039835e7c4da3a8a0b49567573afe__table_wht_wmp_np" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap"><span class="tablecap">X Text Types</span></span></caption><colgroup><col width="33.003300330033%"><col width="33.66336633663366%"><col width="33.33333333333333%"></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry" style="vertical-align:top;" id="d287697e72">Text type</th>
+<th class="entry" style="vertical-align:top;" id="d287697e75">Related S2X type</th>
+<th class="entry" style="vertical-align:top;" id="d287697e78">Description</th>
+</tr>
+</thead><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XACT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">accessibility</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Accessibility</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XALT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">alternativetext</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Alternative text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XBCB</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">breadcrumbstep</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Breadcrumb step</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XBLI</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">listitem</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Bullet list item text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XBUT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">button</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Button text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XCAP</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">caption</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Caption</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XCEL</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">cell</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Cell</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XCKL</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">checkbox</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Checkbox</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XCOL</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">tableColumnHeading</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Column header</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XCRD</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">tabStrip</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Tabstrip</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XDAT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">datanavigationtext</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Data navigation text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XFLD</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">label</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Label</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XFRM</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">frame</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Frame</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XGLS</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">term</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Term</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XGRP</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">grouptitle</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Group title</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XHED</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">heading</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Heading</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XLGD</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">legendtext</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Legend text </td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XLNK</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">hyperlink</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Hyperlink text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XLOG</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">logentry</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Log entry</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XLST</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">listbox</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">List box item</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XMEN</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">menu</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Menu header</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XMIT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">menuitem</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Menu item</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XMSG</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">messagetext</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Message text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XRBL</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">radio</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Radio button</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XRMP</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">roadMapStep</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Roadmap step</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XROW</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">tableRowHeading</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Table row heading</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XSEL</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">selectiontext</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Selection text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XTBS</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">tab</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Tab strip text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XTIT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">tableTitle</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Table title</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XTND</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">treeNode</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Tree node text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XTOL</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">quickInfo</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">Quick info text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e72 "><samp class="ph codeph">XTXT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e75 ">generaltext</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e78 ">General text</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrapper tablenoborder"><table summary id="loio831039835e7c4da3a8a0b49567573afe__table_fmz_fnp_np" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap"><span class="tablecap">Y Text Types</span></span></caption><colgroup><col width="33.333333333333336%"><col width="33.333333333333336%"><col width="33.333333333333336%"></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry" style="vertical-align:top;" id="d287697e526">Text type</th>
+<th class="entry" style="vertical-align:top;" id="d287697e529">Related S2X type</th>
+<th class="entry" style="vertical-align:top;" id="d287697e532">Description</th>
+</tr>
+</thead><tbody class="tbody">
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YACT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">accessibilitylong</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Accessibility (long) </td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YBLI</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">list</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Bullet list item text </td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YDEF</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">definition</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Definition </td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YDES</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">description</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Description</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YEXP</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">explanation</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Explanation </td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YFAA</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">faqa</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">FAQ answer</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YFAQ</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">faq</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">FAQ</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YGLS</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">glossarydefinition</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Glossary definition</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YINF</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">informationtextlong</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Information</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YINS</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">instruction</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Instruction </td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YLOG</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">logEntrylong</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Log entry</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YMSE</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">errorMessage</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Error message</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YMSG</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">messagetextlong</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Message text (long)</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YMSI</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">informationMessage</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Information message long</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YMSW</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">warningMessage</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Warning message</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YTEC</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">technicaltextlong</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Technical text</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YTIC</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">ticker</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">Ticker / Marquee</td>
+</tr>
+<tr class="row">
+<td class="entry" style="vertical-align:top;" headers="d287697e526 "><samp class="ph codeph">YTXT</samp></td>
+<td class="entry" style="vertical-align:top;" headers="d287697e529 ">generaltextlong</td>
+<td class="entry" style="vertical-align:top;" headers="d287697e532 ">General text long</td>
+</tr>
+</tbody></table></div>
+</section></div>
+<section class="example"><h2 class="insertiontitle exampletitle example_title">Example: <span class="title authorexampletitle">Properties File</span></h2>
+
+<pre class="pre codeblock prettyprint lang-prefs">
+#XMSG: a random text used for demonstration purposes, the meaning is not related to any other content in the UI
+HelloWorld=Hello world!
+
+#XBUT,10
+OK=OK
+
+#XBUT,15
+Cancel=Cancel
+
+#XMSG: The user has just triggered an action which cannot be executed
+Unauthorized=User {0} is not authorized to execute command {1}
+
+#XMSG
+Multiline=Line 1\nLine 2
+
+#XFLD: The money you get back at shop&apos;s checkout-counter
+Change=Change</pre>
+</section>
+</div></div></section><div class="clear"></div>
+</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="footer-container" class="grid_12"><footer>
+	<div id="custom-footerSpacer"></div>
+	
+</footer>
+</div></body></html>

@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://root:Muadib70!!@localhost/shits",
+    "database": "shits",
+    "password": "Muadib70!!",
+    "name": "db",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
