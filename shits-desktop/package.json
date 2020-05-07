@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Safety and Health Information Tracking System",
   "main": "main.js",
-  "namespace": "lril",
+  "namespace": "app",
   "readme": "README.md",
   "scripts": {
     "start": "electron ."
@@ -20,6 +20,7 @@
   "dependencies": {
     "electron": "^8.2.4",
     "fullname": "^4.0.1",
+    "openui5-runtime": "^1.50.5",
     "username": "^5.1.0"
   },
   "devDependencies": {

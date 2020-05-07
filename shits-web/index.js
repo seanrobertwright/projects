@@ -6,7 +6,7 @@ const serverIndex = require('serve-index');
 
 const port = process.env.PORT || 8888;
 
-const publicPath = '/sdk';
+const publicPath = '/';
 
 const directory = __dirname + publicPath;
 

@@ -35,12 +35,12 @@
 
     <script 
         id='sap-ui-bootstrap' 
-        src='libs/openui5-runtime/resources/sap-ui-core.js' 
+        src='node_modules/openui5-runtime/resources/sap-ui-core.js' 
         data-sap-ui-theme='sap_belize' 
         data-sap-ui-libs='sap.m'
         data-sap-ui-compatVersion="edge" 
         data-sap-ui-resourceroots='{ 
-            "lril": "./" 
+            "app": "./app" 
         }'>
     </script>
 
@@ -48,7 +48,7 @@
         sap.ui.getCore().attachInit(function () {
             new sap.m.Shell({
                 app: new sap.ui.core.ComponentContainer({
-                        name: "lril.app"
+                        name: "app"
                         }),
                 appWidthLimited: false
             }).placeAt("content");

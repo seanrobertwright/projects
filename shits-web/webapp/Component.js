@@ -5,7 +5,7 @@ sap.ui.define([
 	"sap/ui/model/resource/ResourceModel"
 ], function(UIComponent, models, History) {
 	"use strict";
-	return UIComponent.extend("app.Component", {
+	return UIComponent.extend("sap.ui.demo.toolpageapp.Component", {
 		metadata: {
 			manifest: "json"
 		},
