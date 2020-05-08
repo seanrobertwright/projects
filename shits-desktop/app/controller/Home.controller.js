@@ -2,7 +2,7 @@ sap.ui.define([
 	'./BaseController',
 	'sap/ui/model/json/JSONModel',
 	'sap/ui/Device',
-	'app/model/formatter'
+	'../lril/model/formatter'
 ], function (BaseController, JSONModel, Device, formatter) {
 	"use strict";
 	return BaseController.extend("app.controller.Home", {
