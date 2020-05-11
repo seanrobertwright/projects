@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Safety and Health Information Tracking System",
   "main": "main.js",
-  "namespace": "app",
+  "namespace": "lril",
   "readme": "README.md",
   "scripts": {
     "start": "electron ."

@@ -1,0 +1,65 @@
+<mvc:View
+	controllerName="lril.app.controllers.chemicalManagement.NewChemical"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="newChemicalForm"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="New Chemical Request" level="H4" titleStyle="H4"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+					<Button icon="sap-icon://drop-down-list" />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Toolbar ariaLabelledBy="Title2">
+					<Title id="Title2" text="Purchasing Info" level="H5" titleStyle="H5"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+				</Toolbar>
+				<Label text="Request ID"/>
+				<Input id="requestID" editable="false" value="" />
+				<Label text="Date" />
+				<Input id="requestDate" editable="false" value="" />
+				<Label text="Cost Center" />
+				<Select
+					showSecondaryValues="true"
+					items="{
+							path: '/CostCenterCollection',
+							sorter: { path: 'Number'}
+							}">
+							<core:ListItem key="{Number}" text="{Number}" additionalText="{Name}"/>
+				</Select>
+				<Toolbar ariaLabelledBy="Title3">
+					<Title id="Title3" text="Chemicals" level="H5" titleStyle="H5"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+				</Toolbar>
+				<Label text="Web" />
+				<Input value="" type="Url" />
+				<Label text="Twitter" />
+				<Input value="" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</mvc:View>

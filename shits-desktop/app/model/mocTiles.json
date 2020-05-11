@@ -1,0 +1,30 @@
+{
+    "NavigationTiles": 
+    [
+        {
+            "icon" : "sap-icon://lab",
+            "title" : "New Chemical Review",
+            "info" : "Review a new chemical"
+        },
+        {
+            "icon" : "sap-icon://add-employee",
+            "title" : "New Employee",
+            "info" : "Create and setup a new employee"
+        },
+        {
+            "icon" : "sap-icon://add-equipment",
+            "title" : "New Equipment",
+            "info" : "Add a new piece of equipment"
+        },
+        {
+            "icon" : "sap-icon://add-activity",
+            "title" : "New Safety Work Permit",
+            "info" : "Create a new safety work permit"
+        },
+        {
+            "icon" : "sap-icon://delete",
+            "title" : "Waste Pickup Request",
+            "info" : "Request for non-routine waste to be picked up"
+        }
+    ]
+}

@@ -1,30 +1,8 @@
-/**
- * Application view controller.
- *
- * @Author: Sean Wright
- * @Email:  seanrobertwright@gmail.com
- * @Filename: MainView.controller.js
- * 
- * Copyright (C) Sean Wright.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 sap.ui.define([
-    "lril/app/controllers/BaseController",
-    "jquery.sap.global",
+    'lril/app/controllers/BaseController',
+    'jquery.sap.global',
     'sap/ui/core/Fragment',
-    "sap/ui/core/mvc/Controller",
+    'sap/ui/core/mvc/Controller',
     'sap/ui/model/json/JSONModel',
     'sap/m/ResponsivePopover',
     'sap/m/MessagePopover',
@@ -38,8 +16,7 @@ sap.ui.define([
     'sap/ui/core/CustomData',
     'sap/m/MessageToast',
     'sap/ui/Device'
-], //function (Controller) {
-function (BaseController,
+], function (BaseController,
     jQuery,
     Fragment,
     Controller,
@@ -60,15 +37,9 @@ function (BaseController,
     "use strict";
 
     return BaseController.extend("lril.app.controllers.MainView", {
-        
 
-        /**constructor: function(sName) {
-
-            Controller.apply(this, arguments);
-        },**/
-        
         _bExpanded: true,
-        
+
         onInit: function() {
             this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 
@@ -85,53 +56,26 @@ function (BaseController,
                     this._bExpanded = (oDevice.name === "Desktop");
                 }
             }.bind(this));
-            // DEBUG - show user info
-            /*$SP().whoami({
-                url:"https://henkelgroup.sharepoint.com",
-            }, function(people) {
-                for (var i=0; i < people.length; i++)
-                    alert(people[i]+" "+people[people[i]]);
-            });*/
-            
-            
-
         },
 
         /**
-	    * Convenience method for accessing the router.
-		* @public
-		* @param {sap.ui.base.Event} oEvent The item select event
-		*/
-		onItemSelect: function(oEvent) {
-			var oItem = oEvent.getParameter('item');
-			var sKey = oItem.getKey();
+         * Convenience method for accessing the router.
+         * @public
+         * @param {sap.ui.base.Event} oEvent The item select event
+         */
+        onItemSelect: function(oEvent) {
+            var oItem = oEvent.getParameter('item');
+            var sKey = oItem.getKey();
             // if you click on home, settings or statistics button, call the navTo function
-            
-            var keys = [
-                "home", "Permit", "MOC", "NewEquipment", "employees", "NewEmployee", "NewChemical", "chemicals"
-            ];
-			/*if (sKey === "home" || 
-                sKey === "masterSettings" || 
-                sKey === "statistics" || 
-                sKey === "Permit" || 
-                sKey === "MOC" || 
-                sKey === "RiskAssessment" ||
-                sKey === "NewRiskAssessment" ||
-                sKey === "NewEquipment" ||
-                sKey === "employees" ||
-                sKey === "NewEmployee" ||
-                sKey === "NewChemical" ||
-                sKey === "chemicals"
-                ) {*/
-				// if the device is phone, collaps the navigation side of the app to give more space
-            if (keys.includes(sKey)) {   
+            if ((sKey === "home" || sKey === "masterSettings" || sKey === "statistics")) {
+                // if the device is phone, collaps the navigation side of the app to give more space
                 if (Device.system.phone) {
-					this.onSideNavButtonPress();
-				}
-				this.getRouter().navTo(sKey);
-			} else {
-				MessageToast.show(sKey);
-			}
+                    this.onSideNavButtonPress();
+                }
+                this.getRouter().navTo(sKey);
+            } else {
+                MessageToast.show(sKey);
+            }
         },
 
         onUserNamePress: function(oEvent) {
@@ -199,6 +143,7 @@ function (BaseController,
             }
         },
 
+        // Errors Pressed
         onMessagePopoverPress: function (oEvent) {
             if (!this.byId("errorMessagePopover")) {
                 var oMessagePopover = new MessagePopover(this.getView().createId("errorMessagePopover"), {
@@ -249,12 +194,19 @@ function (BaseController,
                     oNotificationPopover.destroy();
                 }
             });
-            this.byId("app").addDependent(oNotificationPopover);
+            this.byId("lril").addDependent(oNotificationPopover);
             // forward compact/cozy style into dialog
             jQuery.sap.syncStyleClass(this.getView().getController().getOwnerComponent().getContentDensityClass(), this.getView(), oNotificationPopover);
             oNotificationPopover.openBy(oEvent.getSource());
         },
 
+        /**
+         * Factory function for the notification items
+         * @param {string} sId The id for the item
+         * @param {sap.ui.model.Context} oBindingContext The binding context for the item
+         * @returns {sap.m.NotificationListItem} The new notification list item
+         * @private
+         */
         _createNotification: function (sId, oBindingContext) {
             var oBindingObject = oBindingContext.getObject();
             var oNotificationItem = new NotificationListItem({
@@ -301,5 +253,7 @@ function (BaseController,
             });
             return oMessageItem;
         }
+
     });
 });
+
