@@ -32,9 +32,10 @@ let mainWindow;
 // Create the browser window.
 function createWindow() {
 
-  mainWindow = new electron.BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 960,
     height: 750,
+    icon: __dirname + '/icons/tracking-icon-png-9.jpg',
     webPreferences: {
       nodeIntegration: true
     }

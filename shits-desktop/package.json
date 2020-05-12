@@ -18,7 +18,7 @@
   "license": "Apache-2.0",
   "production": false,
   "dependencies": {
-    "electron": "^8.2.4",
+    "electron": "^8.2.5",
     "fullname": "^4.0.1",
     "openui5-runtime": "^1.50.5",
     "username": "^5.1.0"
