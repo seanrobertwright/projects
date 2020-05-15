@@ -16,7 +16,7 @@ sap.ui.define([
 				iPressTheOrderSettingsItem: function() {
 					return this.waitFor({
 						controlType: "sap.m.StandardListItem",
-						viewNamespace: "sap.ui.demo.toolpageapp.view.settings",
+						viewNamespace: "lril.app.view.settings",
 						viewName: sViewName1,
 						matchers: new BindingPath({
 							modelName: "side",
@@ -31,7 +31,7 @@ sap.ui.define([
 					return this.waitFor({
 						id: "save",
 						visible: false,
-						viewNamespace: "sap.ui.demo.toolpageapp.view.settings",
+						viewNamespace: "lril.app.view.settings",
 						viewName: sViewName2,
 						actions: new Press(),
 						errorMessage: "Did not find the save button on the detail settings page"
@@ -42,7 +42,7 @@ sap.ui.define([
 					return this.waitFor({
 						id: "cancel",
 						visible: false,
-						viewNamespace: "sap.ui.demo.toolpageapp.view.settings",
+						viewNamespace: "lril.app.view.settings",
 						viewName: sViewName2,
 						actions: new Press(),
 						errorMessage: "Did not find the cancel button on the detail settings page"
@@ -53,7 +53,7 @@ sap.ui.define([
 			assertions: {
 				iShouldSeeMasterSettingsView: function () {
 					return this.waitFor({
-						viewNamespace: "sap.ui.demo.toolpageapp.view.settings",
+						viewNamespace: "lril.app.view.settings",
 						viewName: sViewName1,
 						success: function () {
 							Opa5.assert.ok(sViewName1,"The master settings view was displayed");
@@ -64,7 +64,7 @@ sap.ui.define([
 
 				iShouldSeeDetailSettingsView: function () {
 					return this.waitFor({
-						viewNamespace: "sap.ui.demo.toolpageapp.view.settings",
+						viewNamespace: "lril.app.view.settings",
 						viewName: sViewName2,
 						success: function () {
 							Opa5.assert.ok(sViewName2,"The detail Settings view was displayed");

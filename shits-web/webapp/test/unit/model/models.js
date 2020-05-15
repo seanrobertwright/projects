@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"sap/ui/demo/toolpageapp/model/models"
+	"lril/app/model/models"
 ], function (models) {
 	"use strict";
 

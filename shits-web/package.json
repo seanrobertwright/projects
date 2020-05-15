@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Safety and Health Information Tracking System",
   "main": "index.js",
+  "namespace": "lril",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,15 +15,16 @@
   "author": "Sean Wright",
   "license": "ISC",
   "dependencies": {
+    "@openui5/sap.m": "^1",
+    "@openui5/sap.tnt": "^1",
+    "@openui5/sap.ui.core": "^1",
+    "@openui5/sap.ui.layout": "^1",
+    "@openui5/sap.uxap": "^1",
+    "@openui5/themelib_sap_fiori_3": "^1",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "open": "^7.0.3",
-    "serve-index": "^1.9.1",
-    "@openui5/sap.m": "^1",
-    "@openui5/sap.tnt": "^1",
-    "@openui5/sap.uxap": "^1",
-    "@openui5/sap.ui.core": "^1",
-    "@openui5/sap.ui.layout": "^1",
-    "@openui5/themelib_sap_fiori_3": "^1"
+    "openui5-runtime": "^1.50.5",
+    "serve-index": "^1.9.1"
   }
 }

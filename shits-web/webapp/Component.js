@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	"./model/models",
+	"lril/app/model/models",
 	"sap/ui/core/routing/History",
 	"sap/ui/model/resource/ResourceModel"
 ], function(UIComponent, models, History) {
 	"use strict";
-	return UIComponent.extend("sap.ui.demo.toolpageapp.Component", {
+	return UIComponent.extend("lril.app.Component", {
 		metadata: {
 			manifest: "json"
 		},

@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Controller, UIComponent) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.toolpageapp.controller.BaseController", {
+	return Controller.extend("lril.app.controllers.BaseController", {
 
 		/**
 		 * Convenience method for accessing the router.

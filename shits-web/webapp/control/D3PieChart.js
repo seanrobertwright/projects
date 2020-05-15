@@ -6,7 +6,7 @@ sap.ui.define([
 ], function($, D3Chart, d3, Parameters) {
 	"use strict";
 
-	return D3Chart.extend("sap.ui.demo.toolpageapp.control.D3PieChart", {
+	return D3Chart.extend("lril.app.control.D3PieChart", {
 
 		init: function () {
 			D3Chart.prototype.init.call(this);

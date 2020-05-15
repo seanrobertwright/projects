@@ -1,5 +1,5 @@
 <mvc:View height="100%"
-	controllerName="sap.ui.demo.toolpageapp.controller.App"
+	controllerName="lril.app.controllers.App"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:tnt="sap.tnt">

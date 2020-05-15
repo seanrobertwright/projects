@@ -6,7 +6,7 @@ sap.ui.getCore().attachInit(function() {
 	"use strict";
 
 	sap.ui.require([
-		"sap/ui/demo/toolpageapp/test/integration/AllJourneys"
+		"lril/app/test/integration/AllJourneys"
 	], function() {
 		QUnit.start();
 	});

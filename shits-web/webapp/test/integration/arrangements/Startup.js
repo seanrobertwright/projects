@@ -24,7 +24,7 @@ sap.ui.define([
 
 	(document.readyState === "loading") ? document.addEventListener("DOMContentLoaded", fnSetupTNTStyles) : fnSetupTNTStyles();
 
-	return Opa5.extend("sap.ui.demo.toolpageapp.test.integration.arrangements.Startup", {
+	return Opa5.extend("lril.app.test.integration.arrangements.Startup", {
 
 		iStartMyApp : function (oOptionsParameter) {
 			var oOptions = oOptionsParameter || {};
@@ -32,7 +32,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "sap.ui.demo.toolpageapp",
+					name: "lril.app",
 					manifest: true
 				},
 				hash: oOptions.hash,

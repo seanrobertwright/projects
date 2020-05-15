@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.ui.demo.toolpageapp.controller.settings.MasterSettings"
+	controllerName="lril.app.controllers.settings.MasterSettings"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page id="masterSettingsPage"

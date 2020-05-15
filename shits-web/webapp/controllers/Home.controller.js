@@ -1,11 +1,11 @@
 sap.ui.define([
-	'./BaseController',
+	'lril/app/controllers/BaseController',
 	'sap/ui/model/json/JSONModel',
 	'sap/ui/Device',
-	'sap/ui/demo/toolpageapp/model/formatter'
+	'lril/app/model/formatter'
 ], function (BaseController, JSONModel, Device, formatter) {
 	"use strict";
-	return BaseController.extend("sap.ui.demo.toolpageapp.controller.Home", {
+	return BaseController.extend("lril.app.controllers.Home", {
 		formatter: formatter,
 
 		onInit: function () {

@@ -3,7 +3,7 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:base="sap.ui.base"
-	xmlns:tool="sap.ui.demo.toolpageapp.control">
+	xmlns:tool="lril.app.control">
 	<l:BlockLayout
 		id="statisticsBlockLayout"
 		busy="false"

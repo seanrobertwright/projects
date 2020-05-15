@@ -1,7 +1,7 @@
 {
 	"_version": "1.12.0",
 	"sap.app": {
-		"id": "sap.ui.demo.toolpageapp",
+		"id": "lril.app",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
@@ -25,7 +25,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.demo.toolpageapp.view.App",
+			"viewName": "lril.app.views.MainView",
 			"type": "XML",
 			"async": true,
 			"id": "app"
@@ -47,7 +47,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "sap.ui.demo.toolpageapp.i18n.i18n"
+					"bundleName": "lril.app.i18n.i18n"
 				}
 			},
 			"side": {
@@ -69,7 +69,7 @@
 				"controlId": "mainContents",
 				"viewType": "XML",
 				"controlAggregation": "pages",
-				"viewPath": "sap.ui.demo.toolpageapp.view",
+				"viewPath": "lril.app.views",
 				"async": true
 			},
 			"routes": [
@@ -77,6 +77,51 @@
 					"pattern": "",
 					"name": "home",
 					"target": "home"
+				},
+				{
+					"pattern": "chemicals",
+					"name": "chemicals",
+					"target": "chemicals"	
+				},
+				{
+					"pattern": "NewChemical",
+					"name": "NewChemical",
+					"target": "newChemical"
+				},
+				{
+					"pattern": "Permit",
+					"name": "Permit",
+					"target": "permit"
+				},
+				{
+					"pattern": "MOC",
+					"name": "MOC",
+					"target": "MOC"
+				},
+				{
+					"pattern": "employees",
+					"name": "employees",
+					"target": "employees"
+				},
+				{
+					"pattern": "NewEmployee",
+					"name": "NewEmployee",
+					"target": "newEmployee"
+				},
+				{
+					"pattern": "NewEquipment",
+					"name": "NewEquipment",
+					"target": "newEquipment"
+				},
+				{
+					"pattern": "RiskAssessment",
+					"name": "RiskAssessment",
+					"target": "riskAssessment"
+				},
+				{
+					"pattern": "NewRiskAssessment",
+					"name": "NewRiskAssessment",
+					"target": "newriskassessment"
 				},
 				{
 					"pattern": "MasterSettings",
@@ -102,6 +147,42 @@
 					"viewId": "home",
 					"viewName": "Home"
 				},
+				"chemicals": {
+					"viewId": "Chemicals",
+					"viewName": "chemicalManagement.Chemicals"
+				},
+				"newChemical": {
+					"viewId": "NewChemical",
+					"viewName": "chemicalManagement.NewChemical"
+				},
+				"permit": {
+					"viewId": "Permit",
+					"viewName": "Permit"
+				},
+				"MOC": {
+					"viewId": "MOC",
+					"viewName": "moc.MOC"
+				},
+				"employees": {
+					"viewId": "employees",
+					"viewName": "employeeManagement.Employees"
+				},
+				"newEmployee": {
+					"viewID":"NewEmployee",
+					"viewName": "employeeManagement.NewEmployee"
+				},
+				"newEquipment": {
+					"viewId": "NewEquipment",
+					"viewName": "moc.NewEquipment"
+				},
+				"riskAssessment":{
+					"viewId": "RiskAssessment",
+					"viewName": "RiskAssessment"
+				},
+				"newriskassessment": {
+					"viewId": "NewRiskAssessment",
+					"viewName": "NewRiskAssessment"
+				},
 				"appSettings": {
 					"viewId": "appSettings",
 					"viewName": "settings.AppSettings"
@@ -123,6 +204,10 @@
 				"statistics": {
 					"viewId": "statistics",
 					"viewName": "Statistics"
+				},
+				"newRiskAssessment": {
+					"viewId": "newRiskAssessment",
+					"viewName": "NewRiskAssessment"
 				}
 			}
 		}

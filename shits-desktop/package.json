@@ -24,6 +24,6 @@
     "username": "^5.1.0"
   },
   "devDependencies": {
-    "replace-in-file": "^2.5.3"
+    "replace-in-file": "^6.0.0"
   }
 }

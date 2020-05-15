@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.ui.demo.toolpageapp.controller.settings.MasterSettings"
+	controllerName="lril.app.controllers.settings.MasterSettings"
 	xmlns="sap.uxap"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:m="sap.m"

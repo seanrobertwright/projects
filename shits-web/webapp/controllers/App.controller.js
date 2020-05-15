@@ -48,7 +48,7 @@ sap.ui.define([
 	// shortcut for sap.m.ButtonType
 	var ButtonType = mobileLibrary.ButtonType;
 
-	return BaseController.extend("sap.ui.demo.toolpageapp.controller.App", {
+	return BaseController.extend("lril.app.controllers.App", {
 
 		_bExpanded: true,
 

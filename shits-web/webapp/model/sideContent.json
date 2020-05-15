@@ -8,11 +8,93 @@
 			"items": []
 		},
 		{
+			"title": "Chemicals",
+			"icon": "sap-icon://lab",
+			"expanded":true,
+			"key":"chemicals",
+			"items":[
+				{
+					"title": "New Chemical Purchase",
+					"key": "NewChemical"
+				}
+			]
+		},
+		{
+			"title": "Employees",
+			"icon": "sap-icon://employee",
+			"expanded":true,
+			"key":"employees",
+			"items":[
+				{
+					"title":"New Employee",
+					"key":"NewEmployee"
+				}
+			]
+		},
+		{
+			"title": "Inspections",
+			"icon": "sap-icon://inspection",
+			"expanded": true,
+			"key": "inspections",
+			"items":[
+				{
+					"title": "AED Inspections",
+					"key": "aedInspections"
+				},
+				{
+					"title": "First Aid Kit Inspections",
+					"key": "firstAidInspections"
+				},
+				{
+					"title": "Lab Inspections",
+					"key": "labInspections"
+				}
+			]
+		},
+		{
+			"title": "Management of Change",
+			"icon": "sap-icon://journey-change",
+			"expanded": true,
+			"key": "MOC",
+			"items":[
+				{
+					"title": "New Chemical Review",
+					"key": "NewChemicalReview"
+				},
+				{
+					"title": "New Employee",
+					"key": "NewEmployee"
+				},
+				{
+					"title": "New Equipment",
+					"key": "NewEquipment"
+				}
+			]
+		},
+		{
+			"title": "Risk Assessments",
+			"icon": "sap-icon://show-edit",
+			"expanded": true,
+			"key": "RiskAssessment",
+			"items":[
+				{
+					"title": "New Risk Assessment",
+					"key": "NewRiskAssessment"
+				}
+			]
+		},
+		{
+			"title": "Safe Work Permit",
+			"icon": "sap-icon://permission",
+			"expanded": true,
+			"key": "Permit",
+			"items":[]
+		},
+		{
 			"title": "Settings",
 			"icon": "sap-icon://settings",
 			"expanded": false,
-			"key": "masterSettings"
-		,
+			"key": "masterSettings",
 			"items": []
 		},
 		{
@@ -28,6 +110,22 @@
 				{
 					"title": "Order Statistics",
 					"key": "Order Statistics was pressed"
+				}
+			]
+		},
+		{
+			"title": "Waste",
+			"icon":"sap-icon://chain-link",
+			"expanded":true,
+			"key": "wasteManagement",
+			"items": [
+				{
+					"title": "Waste Pickup Request",
+					"key": "WastePickupRequest"
+				},
+				{
+					"title": "Manifests",
+					"key": "Manifests"
 				}
 			]
 		}

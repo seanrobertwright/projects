@@ -1,0 +1,27 @@
+<mvc:View
+	controllerName="lril.app.controllers.NewPickupRequest"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page showHeader="false">
+		<content>
+			<Panel id="newPickupRequestContainer" class="sapUiNoContentPadding">
+				<headerToolbar>
+					<Toolbar>
+						<Title
+							text="title"
+							level="H4"
+							textAlign="Left"/>
+						<ToolbarSpacer/>
+						<Button
+							id="refresh"
+							icon="sap-icon://refresh"
+							press="onRefresh"
+							tooltip="{i18n>refreshButtonTooltip}"/>
+					</Toolbar>
+				</headerToolbar>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

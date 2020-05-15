@@ -40,13 +40,13 @@ function createWindow() {
       nodeIntegration: true
     }
   });
-
+  
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
-  // Open the DevTools.
+    // Open the DevTools.
   mainWindow.webContents.openDevTools();
-
+   
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
     // Dereference the window object, usually you would store windows

@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "sap.ui.demo.toolpageapp.view.",
+		viewNamespace: "lril.app.view.",
 		autoWait: true
 	});
 });

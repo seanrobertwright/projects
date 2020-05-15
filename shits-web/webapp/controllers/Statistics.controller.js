@@ -5,7 +5,7 @@ sap.ui.define([
 	"sap/ui/core/mvc/XMLView"
 ], function (BaseController, JSONModel, VersionInfo, XMLView) {
 	"use strict";
-	return BaseController.extend("sap.ui.demo.toolpageapp.controller.Statistics", {
+	return BaseController.extend("lril.app.controllers.Statistics", {
 
 		onInit: function () {
 			var oViewModel = new JSONModel({
@@ -35,7 +35,7 @@ sap.ui.define([
 			this._createView = function (sType) {
 				XMLView.create({
 					id: this.getView().createId("charts"),
-					viewName: "sap.ui.demo.toolpageapp.view.Statistics" + sType
+					viewName: "lril.app.view.Statistics" + sType
 				}).then(function (oView) {
 					this.byId("statisticsContainer").addContent(oView);
 				}.bind(this));

@@ -56,7 +56,7 @@ sap.ui.define([
 				iShouldSeeTheCharts: function () {
 					if (sChartViewName.search("D3") >= 0) {
 						this.waitFor({
-							controlType: "sap.ui.demo.toolpageapp.control.D3PieChart",
+							controlType: "lril.app.control.D3PieChart",
 							viewName: sChartViewName,
 							success: function (aCharts) {
 								Opa5.assert.ok(aCharts.length === 2, "Two pie charts are displayed");
@@ -65,7 +65,7 @@ sap.ui.define([
 						});
 
 						this.waitFor({
-							controlType: "sap.ui.demo.toolpageapp.control.D3ColumnChart",
+							controlType: "lril.app.control.D3ColumnChart",
 							viewName: sChartViewName,
 							success: function (aCharts) {
 								Opa5.assert.ok(aCharts.length === 2, "Two column charts are displayed");
@@ -74,7 +74,7 @@ sap.ui.define([
 						});
 
 						this.waitFor({
-							controlType: "sap.ui.demo.toolpageapp.control.D3ComparisonChart",
+							controlType: "lril.app.control.D3ComparisonChart",
 							viewName: sChartViewName,
 							success: function (aCharts) {
 								Opa5.assert.ok(aCharts.length === 2, "Two comparison charts are displayed");

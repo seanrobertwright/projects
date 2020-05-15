@@ -1,0 +1,137 @@
+<!--
+ * Definition of the application view.
+ *
+ * @Author: Sean Wright
+ * @Email:  seanrobertwright@gmail.com
+ * @Filename: MainView.view.xml
+ * 
+ * Copyright (C) Sean Wright.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<mvc:View 
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    controllerName="lril.app.controllers.MainView"
+    displayBlock="true">
+   <tnt:ToolPage
+		id="app"
+		class="sapUiDemoToolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Button
+					id="sideNavigationToggleButton"
+					icon="sap-icon://menu2"
+					type="Transparent"
+					press="onSideNavButtonPress"
+					tooltip="{i18n>navigationToggleButtonTooltip}">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+				<ToolbarSpacer/>
+				<Title text="{i18n>appTitle}"/>
+				<ToolbarSpacer/>
+				<Button
+					id="errorButton"
+					icon="sap-icon://message-popup"
+					visible="{= ${alerts>/alerts/errors}.length === 0 ? false : true }"
+					type="Transparent"
+					press="onMessagePopoverPress"
+					tooltip="{i18n>errorButtonTooltip}">
+					<layoutData>
+						<OverflowToolbarLayoutData closeOverflowOnInteraction="false"/>
+					</layoutData>
+				</Button>
+				<Button
+					id="notificationButton"
+					icon="sap-icon://ui-notifications"
+					visible="{= ${alerts>/alerts/notifications}.length === 0 ? false : true }"
+					type="Transparent"
+					press="onNotificationPress"
+					tooltip="{i18n>notificationButtonTooltip}">
+					<layoutData>
+						<OverflowToolbarLayoutData closeOverflowOnInteraction="false"/>
+					</layoutData>
+				</Button>
+				<Button
+					id="userButton"
+					text="{i18n>userName}"
+					type="Transparent"
+					press="onUserNamePress">
+					<layoutData>
+						<OverflowToolbarLayoutData closeOverflowOnInteraction="false"/>
+					</layoutData>
+				</Button>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation
+				expanded="true"
+				itemSelect="onItemSelect">
+				<tnt:NavigationList
+					items="{
+						path: 'side>/navigation',
+						templateShareable: false
+					}">
+					<tnt:NavigationListItem
+						text="{side>title}"
+						icon="{side>icon}"
+						expanded="{side>expanded}"
+						items="{
+							path: 'side>items',
+							templateShareable: false
+						}"
+						key="{side>key}">
+						<tnt:NavigationListItem
+							text="{side>title}"
+							key="{side>key}">
+						</tnt:NavigationListItem>
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				<tnt:fixedItem>
+					<tnt:NavigationList
+						items="{
+							path: 'side>/fixedNavigation',
+							templateShareable: false
+						}">
+						<tnt:NavigationListItem
+							text="{side>title}"
+							icon="{side>icon}"
+							key="{side>key}">
+						</tnt:NavigationListItem>
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<App id="mainContents"/>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+   
+   
+   
+   <!--<App>
+      <pages>
+        <Page title="Safety Management System">
+            
+        </Page>
+
+      </pages>
+   </App>-->
+</mvc:View>

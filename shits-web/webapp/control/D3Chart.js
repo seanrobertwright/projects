@@ -7,7 +7,7 @@ sap.ui.define([
 ], function($, Control, HTML, ResizeHandler) {
 	"use strict";
 
-	return Control.extend("sap.ui.demo.toolpageapp.control.D3Chart", {
+	return Control.extend("lril.app.control.D3Chart", {
 
 		metadata: {
 			properties: {
