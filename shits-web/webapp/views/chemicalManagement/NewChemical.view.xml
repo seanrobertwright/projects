@@ -45,20 +45,27 @@
 				<Select
 					showSecondaryValues="true"
 					items="{
-							path: '/CostCenterCollection',
-							sorter: { path: 'Number'}
+							path: '/number'							
 							}">
-							<core:ListItem key="{Number}" text="{Number}" additionalText="{Name}"/>
+							<core:ListItem key="{number}" text="{number}" additionalText="{name}"/>
 				</Select>
-				<Toolbar ariaLabelledBy="Title3">
-					<Title id="Title3" text="Chemicals" level="H5" titleStyle="H5"/>
-					<ToolbarSpacer />
-					<Button icon="sap-icon://settings"/>
-				</Toolbar>
-				<Label text="Web" />
-				<Input value="" type="Url" />
-				<Label text="Twitter" />
-				<Input value="" />
+				<Toolbar><ToolbarSpacer></ToolbarSpacer></Toolbar>
+				<Table id="chemicalTable" mode='Delete' delete="deleteRow">
+					<headerToolbar ariaLabelledBy="Title3">
+					<Toolbar>
+						<Title id="Title3" text="Chemicals" level="H5" titleStyle="H5"/>
+						<ToolbarSpacer />
+						<Button icon="sap-icon://add" type="Emphasized" press="onAddChemical"/>
+					</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column><Text text="Qty"></Text></Column>
+						<Column><Text text="Part No."></Text></Column>
+						<Column><Text text="Vendor"></Text></Column>
+						<Column><Text text="Item Description"></Text></Column>
+						<Column><Text text="Unit Price"></Text></Column>
+					</columns>
+				</Table>
 			</f:content>
 		</f:SimpleForm>
 	</VBox>

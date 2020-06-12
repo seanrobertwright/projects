@@ -85,6 +85,7 @@ function (BaseController,
                     this._bExpanded = (oDevice.name === "Desktop");
                 }
             }.bind(this));
+            console.log("I'm in the MainView controller init function");
             // DEBUG - show user info
             /*$SP().whoami({
                 url:"https://henkelgroup.sharepoint.com",

@@ -20,7 +20,16 @@ sap.ui.define([
             this.byId("requestDate").setValue(today);
             console.log(today);
 
-            var oData = {
+            // Get Dropdown data from REST API
+            var xhr = new XMLHttpResquest();
+            xhr.open("GET","http://http://localhost:3000/explorer/#!/costcenter/costcenter_find", true);
+            xhr.onload = function() {
+                console.log(xhr.responseText);
+            };
+
+            xhr.send();
+            
+            /** var oData = {
                 "CostCenterCollection": [
                     {
                         "Number": "3251889484",
@@ -38,7 +47,7 @@ sap.ui.define([
             };
 
             var oModel = new JSONModel(oData);
-            this.getView().setModel(oModel);
+            this.getView().setModel(oModel); **/
         }
     });
 });
