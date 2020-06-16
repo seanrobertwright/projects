@@ -21,13 +21,9 @@ sap.ui.define([
             console.log(today);
 
             // Get Dropdown data from REST API
-            var xhr = new XMLHttpResquest();
-            xhr.open("GET","http://http://localhost:3000/explorer/#!/costcenter/costcenter_find", true);
-            xhr.onload = function() {
-                console.log(xhr.responseText);
-            };
-
-            xhr.send();
+           var oSelectModel = new sap.ui.model.JSONModel();
+           oSelectModel.loadData("http://localhost:3000/explorer/#/costcenters", null, true, 'GET');
+           sap.ui.getCore().setModel(oSelectModel, "costCenters");
             
             /** var oData = {
                 "CostCenterCollection": [

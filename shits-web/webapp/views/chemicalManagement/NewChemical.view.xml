@@ -45,9 +45,10 @@
 				<Select
 					showSecondaryValues="true"
 					items="{
-							path: '/number'							
+							path: '/costCenters',
+							sorter: { path: 'name' }							
 							}">
-							<core:ListItem key="{number}" text="{number}" additionalText="{name}"/>
+							<core:Item key="{name}" text="{name}" />
 				</Select>
 				<Toolbar><ToolbarSpacer></ToolbarSpacer></Toolbar>
 				<Table id="chemicalTable" mode='Delete' delete="deleteRow">
