@@ -6,9 +6,9 @@
   "mysql": {
     "host": "",
     "port": 3306,
-    "url": "mysql://shits:Rubicon431!!@localhost/shits",
+    "url": "mysql://shits:Muadib70!!@localhost/shits",
     "database": "shits",
-    "password": "Rubicon431!!",
+    "password": "Muadib70!!",
     "name": "mysql",
     "user": "shits",
     "connector": "mysql"

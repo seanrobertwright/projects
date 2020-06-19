@@ -21,10 +21,11 @@ sap.ui.define([
             console.log(today);
 
             // Get Dropdown data from REST API
-           var oSelectModel = new sap.ui.model.JSONModel();
-           oSelectModel.loadData("http://localhost:3000/explorer/#/costcenters", null, true, 'GET');
-           sap.ui.getCore().setModel(oSelectModel, "costCenters");
-            
+           var oSelectModel = new JSONModel();
+           oSelectModel.loadData("http://localhost:3000/api/costcenters?access_token=FsO6ZwPrAU3Flqlikt10XzKY6S5lq5Y81ADdNjRxtkzHCBAXp1m54OwUWomBqeOx", null, true, 'GET');
+           this.getView().setModel(oSelectModel);
+           console.log('Data loaded') ;
+           console.log(oSelectModel);
             /** var oData = {
                 "CostCenterCollection": [
                     {
