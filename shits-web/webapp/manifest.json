@@ -140,6 +140,11 @@
 					"pattern": "Statistics",
 					"name": "statistics",
 					"target": "statistics"
+				},
+				{
+					"pattern": "LMS",
+					"name": "lms",
+					"target": "lms"
 				}
 			],
 			"targets": {
@@ -208,6 +213,10 @@
 				"newRiskAssessment": {
 					"viewId": "newRiskAssessment",
 					"viewName": "NewRiskAssessment"
+				},
+				"lms":{
+					"viewID": "lms",
+					"viewName": "lms"
 				}
 			}
 		}

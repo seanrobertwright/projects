@@ -7,7 +7,7 @@ sap.ui.define([
     "use strict";
     return BaseController.extend("lril.app.controllers.chemicalManagement.NewChemical", {
         formatter: formatter,
-
+        
         onInit: function () {
             var today = new Date();
             this.byId("requestID").setValue(Date.now());
@@ -26,7 +26,8 @@ sap.ui.define([
            this.getView().setModel(oSelectModel);
            console.log('Data loaded') ;
            console.log(oSelectModel);
-            /** var oData = {
+
+                       /** var oData = {
                 "CostCenterCollection": [
                     {
                         "Number": "3251889484",
@@ -45,6 +46,27 @@ sap.ui.define([
 
             var oModel = new JSONModel(oData);
             this.getView().setModel(oModel); **/
+        },
+
+        onAddChemical:function(oEvent){
+            var oItem = new sap.m.ColumnListItem({
+                cells: [ new sap.m.Input(), new sap.m.Input(), new sap.m.Input(), new sap.m.Input(), new sap.m.Input(), new sap.m.Button({
+                    text:"Delete",
+                    press:[ this.remove, this]
+                })]   
+            });
+            var oTable = this.getView().byId('chemicalTable');
+            oTable.addItem(oItem);
+        },
+
+        deleteRow:function(oEvent){
+            var oTable = this.getView().byId('chemicalTable');
+            oTable.removeItem(oEvent.getParameter('listItem'));
+        },
+
+        remove:function(oEvent){
+            var oTable = this.getView().byId('chemicalTable');
+            oTable.removeItem(oEvent.getSource().getParent());
         }
     });
 });

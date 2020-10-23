@@ -15,6 +15,7 @@
   "author": "Sean Wright",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@openui5/sap.m": "^1",
     "@openui5/sap.tnt": "^1",
     "@openui5/sap.ui.core": "^1",
@@ -25,6 +26,7 @@
     "express": "^4.17.1",
     "open": "^7.0.3",
     "openui5-runtime": "^1.50.5",
+    "react-gluejar": "^1.0.0",
     "serve-index": "^1.9.1"
   }
 }

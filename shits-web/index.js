@@ -31,3 +31,4 @@ app.listen(port);
 open(launchURL);
 
 console.log("OpenUI5 SDK server running at\n  =>" + launchURL + "\nCTRL + C to shutdown");
+

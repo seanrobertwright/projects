@@ -10,6 +10,11 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+var path = require('path');
+var userName = process.env['USERPROFILE'].split(path.sep)[2];
+var loginId = path.join("domainName", userName);
+console.log(loginId);
+
 app.start = function() {
   // start the web server
   return app.listen(function() {

@@ -39,6 +39,8 @@
 				</Toolbar>
 				<Label text="Request ID"/>
 				<Input id="requestID" editable="false" value="" />
+				<Label text="Requested By"/>
+				<Input id="requestedBy" editable="false" value="" />
 				<Label text="Date" />
 				<Input id="requestDate" editable="false" value="" />
 				<Label text="Cost Center" />
