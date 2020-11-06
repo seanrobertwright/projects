@@ -111,9 +111,10 @@ export function Home() {
     toggleCharts === "lineChart" ? "Bar Chart" : "Line Chart";
   return (
     <FlexBox
-      justifyContent={FlexBoxJustifyContent.Center}
+      justifyContent={FlexBoxJustifyContent.left}
       wrap={FlexBoxWrap.Wrap}
       style={spacing.sapUiContentPadding}
+      height="100%"
     >
       <Card
         avatar={
