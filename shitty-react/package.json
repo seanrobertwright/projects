@@ -1,18 +1,19 @@
 {
-  "name": "shits-react",
+  "name": "shitty-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fluentui/react": "^7.147.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "@ui5/webcomponents-react": "^0.11.3",
-    "@uifabric/react-cards": "^0.113.16",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "@ui5/webcomponents-react-base": "^0.11.3",
+    "@ui5/webcomponents-react-charts": "^0.11.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-holy-grail-layout": "^0.1.5",
-    "react-scripts": "3.4.4"
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,7 +22,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [

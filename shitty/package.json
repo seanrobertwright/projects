@@ -10,9 +10,12 @@
     "@ui5/webcomponents-fiori": "1.0.0-rc.9",
     "@ui5/webcomponents-icons": "1.0.0-rc.9",
     "@ui5/webcomponents-react": "^0.11.0",
+    "@ui5/webcomponents-react-base": "^0.11.3",
+    "@ui5/webcomponents-react-charts": "^0.11.3",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-holy-grail-layout": "^0.1.5",
     "react-scripts": "3.4.4"
   },
   "scripts": {

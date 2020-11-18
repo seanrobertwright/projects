@@ -46,10 +46,6 @@ export function MainApp() {
                 <Redirect from="/" to="/home" />
             </Switch>
             </FlexBox>
-            <script>
-                const sideNavigation = document.querySelector("SideNavigation");
-                document.querySelector("#startButton").addEventListener("click", event => sideNavigation.collapse = !sideNavigation.collapsed);
-            </script>
-            </>
+        </>
     );
 }
