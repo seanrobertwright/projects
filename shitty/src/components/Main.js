@@ -38,10 +38,10 @@ export class Main extends Component {
                         </ShellBar>
                     </Header>
                     <Body>
-                        <Content bg="lightblue" right p={2}>
+                        <Content right p={2}>
                             Content
                         </Content>
-                        <Aside left min-width={0}>
+                        <Aside left width={1}>
                             <SideNavigation collapsed={this.state.navExpanded}>
                                 <SideNavigationItem text="Home" icon="home"></SideNavigationItem>
                                 <SideNavigationItem text="Chemical" icon="lab"></SideNavigationItem>
@@ -52,8 +52,8 @@ export class Main extends Component {
                             </SideNavigation>
                         </Aside>
                     </Body>
-                    <Footer bg="yellow" p={2}>
-                        Footer
+                    <Footer p={2}>
+                        Status
                     </Footer>          
                 </Container>);
             </div>
