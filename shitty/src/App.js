@@ -3,7 +3,7 @@ import {
 } from '@ui5/webcomponents-react';
 import React from 'react';
 import './App.css';
-import { MainApp } from './MainApp';
+//import { MainApp } from './MainApp';
 import { HashRouter } from "react-router-dom";
 import { Main } from './components/Main';
 

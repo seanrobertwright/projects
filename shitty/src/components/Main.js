@@ -7,7 +7,8 @@ import {
     Aside,
     Footer
 } from 'react-holy-grail-layout'
-import { ShellBar, ShellBarItem, Avatar, SideNavigation, SideNavigationItem, FlexBox, FlexBoxDirection, Button } from "@ui5/webcomponents-react";
+import { ShellBar, ShellBarItem, Avatar, SideNavigation, SideNavigationItem, Button } from "@ui5/webcomponents-react";
+import "@ui5/webcomponents-icons/dist/Assets";
 
 export class Main extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export class Main extends Component {
                 <Container>
                     <Header>
                         <ShellBar 
-                            logo={<img src="henkel.jpg" />}
+                            logo={<img src="henkel.jpg" alt="Henkel" />}
                             profile={<Avatar image="ff2.jpg" />}
                             primaryTitle="SHITS"
                             >
@@ -38,10 +39,10 @@ export class Main extends Component {
                         </ShellBar>
                     </Header>
                     <Body>
-                        <Content bg="lightblue" right p={2}>
+                        <Content border={5} borderColor="black" borderRadius={10} right p={2}>
                             Content
                         </Content>
-                        <Aside left min-width={0}>
+                        <Aside left width={1}>
                             <SideNavigation collapsed={this.state.navExpanded}>
                                 <SideNavigationItem text="Home" icon="home"></SideNavigationItem>
                                 <SideNavigationItem text="Chemical" icon="lab"></SideNavigationItem>
@@ -52,7 +53,7 @@ export class Main extends Component {
                             </SideNavigation>
                         </Aside>
                     </Body>
-                    <Footer bg="yellow" p={2}>
+                    <Footer border={2} borderColor={"black"} p={2}>
                         Footer
                     </Footer>          
                 </Container>);
