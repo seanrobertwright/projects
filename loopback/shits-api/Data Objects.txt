@@ -1,0 +1,43 @@
+Employee
+    ID
+    <Training Group ID>
+    Corporate ID Number
+    Frist Name
+    Last Name
+    Email Address
+    Username
+    <Site ID>
+    <SBU ID>
+    <Department ID>
+    <Cost Center ID>
+    Supervisor <Employee ID>
+Site
+    ID
+    Site Name
+SBU
+    ID
+    SBU Name
+Cost Center
+    ID
+    Cost Center Number
+Department
+    ID
+    Department Name
+    Department Head <Employee>
+TrainingGroup
+    ID
+    Training Group Name (Admin, Lab, Facilities, Contractor)
+Training Course
+    ID
+    Name
+    Description
+    Image
+Training Record
+    <Employee ID>
+    <Training Course ID>
+    <Training Status ID>
+    Start Date 
+    Due Date
+Training Status
+    ID
+    Name (Not Started, In Progress, Completed)
