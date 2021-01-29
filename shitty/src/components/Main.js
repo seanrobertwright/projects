@@ -7,10 +7,13 @@ import {
     Aside,
     Footer
 } from 'react-holy-grail-layout'
-import { ShellBar, ShellBarItem, Avatar, SideNavigation, SideNavigationItem, Button } from "@ui5/webcomponents-react";
+import { ShellBar, ShellBarItem, Avatar, SideNavigation, SideNavigationItem, Button, SideNavigationSubItem } from "@ui5/webcomponents-react";
 import "@ui5/webcomponents-icons/dist/Assets";
 
 export class Main extends Component {
+
+    
+
     constructor(props) {
         super(props)
     
@@ -23,6 +26,11 @@ export class Main extends Component {
         this.setState({
             navExpanded: !this.state.navExpanded
         })
+    }
+
+    itemSelected() {
+        console.log("Item Selected");
+        
     }
     render() {
         return (
@@ -43,9 +51,11 @@ export class Main extends Component {
                             Content
                         </Content>
                         <Aside left width={1}>
-                            <SideNavigation collapsed={this.state.navExpanded}>
+                            <SideNavigation collapsed={this.state.navExpanded} onSelectionChange={() =>this.itemSelected()}>
                                 <SideNavigationItem text="Home" icon="home"></SideNavigationItem>
-                                <SideNavigationItem text="Chemical" icon="lab"></SideNavigationItem>
+                                <SideNavigationItem text="Chemical" icon="lab">
+                                    <SideNavigationSubItem text="Order New Chemical" />
+                                </SideNavigationItem>
                                 <SideNavigationItem text="Employee" icon="employee"></SideNavigationItem>
                                 <SideNavigationItem text="Waste" icon="delete"></SideNavigationItem>
                                 <SideNavigationItem text="Settings" icon="customize"></SideNavigationItem>
