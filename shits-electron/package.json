@@ -1,0 +1,14 @@
+{
+  "name": "shits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Sean Wright",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.2.3"
+  }
+}
