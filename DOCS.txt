@@ -1,0 +1,55 @@
+Holy Grail Template for Reactjs
+from: https://stackoverflow.com/questions/33514047/flexbox-holy-grail-layout-fixed-header-fixed-left-nav-fluid-content-area-fix
+
+JS:
+====
+
+<body>
+  <header></header>
+  <app>
+    <nav>Left Nav</nav>
+    <article></article>
+    <aside>Right Nav</aside>
+  </app>
+</body>
+
+CSS:
+=====
+html, body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header { 
+    z-index: 0;
+    flex: 0 64px;
+    display: flex;
+}
+
+app {
+    flex: 1;
+    display: flex;
+}
+
+nav {
+    flex: 0 0 256px;
+    order: 0;
+}
+
+article {
+    flex: 1;
+    order: 1;
+    overflow: auto;
+}
+
+aside {
+    flex: 0 0 256px;
+    order: 2;
+}
