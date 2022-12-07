@@ -23,7 +23,7 @@
     "@openui5/sap.uxap": "^1",
     "@openui5/themelib_sap_fiori_3": "^1",
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "open": "^7.0.3",
     "openui5-runtime": "^1.50.5",
     "react-gluejar": "^1.0.0",
